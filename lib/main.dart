@@ -13,6 +13,7 @@ import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
@@ -132,21 +133,20 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'myVisions': MyVisionsWidget(),
-      'Main_teamPage': MainTeamPageWidget(),
+      'communityPage': CommunityPageWidget(),
       'myProfile': MyProfileWidget(),
-      'CommunityPage': CommunityPageWidget(),
-      'NewCommunity': NewCommunityWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
+      extendBody: true,
       bottomNavigationBar: Visibility(
         visible: responsiveVisibility(
           context: context,
           tabletLandscape: false,
           desktop: false,
         ),
-        child: BottomNavigationBar(
+        child: FloatingNavbar(
           currentIndex: currentIndex,
           onTap: (i) => setState(() {
             _currentPage = null;
@@ -155,71 +155,95 @@ class _NavBarPageState extends State<NavBarPage> {
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           selectedItemColor: FlutterFlowTheme.of(context).secondary,
           unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: FaIcon(
-                FontAwesomeIcons.cloudflare,
-                size: 24.0,
+          selectedBackgroundColor: Color(0x00000000),
+          borderRadius: 8.0,
+          itemBorderRadius: 8.0,
+          margin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+          width: double.infinity,
+          elevation: 0.0,
+          items: [
+            FloatingNavbarItem(
+              customWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    currentIndex == 0
+                        ? Icons.developer_board_outlined
+                        : Icons.developer_board_outlined,
+                    color: currentIndex == 0
+                        ? FlutterFlowTheme.of(context).secondary
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      'hmxr55qt' /* My Visions */,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: currentIndex == 0
+                          ? FlutterFlowTheme.of(context).secondary
+                          : FlutterFlowTheme.of(context).secondaryText,
+                      fontSize: 11.0,
+                    ),
+                  ),
+                ],
               ),
-              activeIcon: FaIcon(
-                FontAwesomeIcons.cloudflare,
-                size: 24.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                'hmxr55qt' /* Home */,
-              ),
-              tooltip: '',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.group_outlined,
-                size: 24.0,
+            FloatingNavbarItem(
+              customWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    FontAwesomeIcons.globeAmericas,
+                    color: currentIndex == 1
+                        ? FlutterFlowTheme.of(context).secondary
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      'q5tyzm78' /* Communities */,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: currentIndex == 1
+                          ? FlutterFlowTheme.of(context).secondary
+                          : FlutterFlowTheme.of(context).secondaryText,
+                      fontSize: 11.0,
+                    ),
+                  ),
+                ],
               ),
-              activeIcon: Icon(
-                Icons.group_rounded,
-                size: 24.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                'h2tjjlou' /* My Team */,
-              ),
-              tooltip: '',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.account_circle_outlined,
-                size: 24.0,
+            FloatingNavbarItem(
+              customWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    currentIndex == 2
+                        ? Icons.account_circle_rounded
+                        : Icons.account_circle_outlined,
+                    color: currentIndex == 2
+                        ? FlutterFlowTheme.of(context).secondary
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      '3e1n01mf' /* My Profile */,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: currentIndex == 2
+                          ? FlutterFlowTheme.of(context).secondary
+                          : FlutterFlowTheme.of(context).secondaryText,
+                      fontSize: 11.0,
+                    ),
+                  ),
+                ],
               ),
-              activeIcon: Icon(
-                Icons.account_circle_rounded,
-                size: 24.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                '3e1n01mf' /* Home */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: FaIcon(
-                FontAwesomeIcons.globeAmericas,
-                size: 24.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                'w2234uq5' /* Home */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home_outlined,
-                size: 24.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                'q5tyzm78' /* Home */,
-              ),
-              tooltip: '',
             )
           ],
         ),

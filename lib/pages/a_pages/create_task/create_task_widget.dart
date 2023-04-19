@@ -240,35 +240,6 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                                 ],
                                               ),
                                             ),
-                                            FlutterFlowIconButton(
-                                              borderColor: Colors.transparent,
-                                              borderRadius: 30.0,
-                                              borderWidth: 1.0,
-                                              buttonSize: 60.0,
-                                              icon: Icon(
-                                                Icons.edit_outlined,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 30.0,
-                                              ),
-                                              onPressed: () async {
-                                                context.pushNamed(
-                                                  'createTask_1_SelectProject',
-                                                  extra: <String, dynamic>{
-                                                    kTransitionInfoKey:
-                                                        TransitionInfo(
-                                                      hasTransition: true,
-                                                      transitionType:
-                                                          PageTransitionType
-                                                              .leftToRight,
-                                                      duration: Duration(
-                                                          milliseconds: 220),
-                                                    ),
-                                                  },
-                                                );
-                                              },
-                                            ),
                                           ],
                                         ),
                                       ),
@@ -415,7 +386,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                             FormFieldController<String>(
                                       _model.statusSelectValue ??=
                                           FFLocalizations.of(context).getText(
-                                        'mrhw8kjh' /* Not Started */,
+                                        '8sub26sn' /* Not Started */,
                                       ),
                                     ),
                                     options: [
@@ -647,6 +618,37 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                   0.0, 0.0, 0.0, 150.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
+                                  var _shouldSetState = false;
+                                  if (_model.taskNameController.text == null ||
+                                      _model.taskNameController.text == '') {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'Please insert a title!',
+                                          style: FlutterFlowTheme.of(context)
+                                              .titleMedium
+                                              .override(
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleMediumFamily),
+                                              ),
+                                        ),
+                                        duration: Duration(milliseconds: 4000),
+                                        backgroundColor: Color(0xFF831717),
+                                      ),
+                                    );
+                                    if (_shouldSetState) setState(() {});
+                                    return;
+                                  }
                                   if (_model.formKey.currentState == null ||
                                       !_model.formKey.currentState!
                                           .validate()) {
@@ -662,6 +664,12 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                       owner: currentUserReference,
                                       status: _model.statusSelectValue,
                                       projectRef: widget.projectRef!.reference,
+                                      dueDate: _model.datePicked2 != null
+                                          ? _model.datePicked2
+                                          : null,
+                                      startDate: _model.datePicked1 != null
+                                          ? _model.datePicked1
+                                          : null,
                                     ),
                                     'members': [currentUserReference],
                                     'timeCreated': FieldValue.serverTimestamp(),
@@ -704,6 +712,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                       ActivityRecord.getDocumentFromData(
                                           activityCreateData,
                                           activityRecordReference);
+                                  _shouldSetState = true;
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
@@ -729,7 +738,9 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                       backgroundColor: Color(0xFFFA8072),
                                     ),
                                   );
-
+                                  if (Navigator.of(context).canPop()) {
+                                    context.pop();
+                                  }
                                   context.pushNamed(
                                     'projectDetailsPage2a',
                                     queryParams: {
@@ -747,7 +758,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                     },
                                   );
 
-                                  setState(() {});
+                                  if (_shouldSetState) setState(() {});
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   'y163v19q' /* Create Task */,

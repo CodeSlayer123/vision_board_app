@@ -32,6 +32,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
 
     _model.userNameController ??= TextEditingController();
     _model.shortBioController ??= TextEditingController();
+    _model.phoneNumberController ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -297,6 +298,89 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                 .asValidator(context),
                           ),
                         ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 16.0, 16.0, 0.0),
+                          child: TextFormField(
+                            controller: _model.phoneNumberController,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: FFLocalizations.of(context).getText(
+                                'v8ktyj0f' /* (optional) */,
+                              ),
+                              labelStyle: FlutterFlowTheme.of(context)
+                                  .labelSmall
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .labelSmallFamily,
+                                    fontSize: 16.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .labelSmallFamily),
+                                  ),
+                              hintText: FFLocalizations.of(context).getText(
+                                '355g1zkk' /* Enter phone number here.. */,
+                              ),
+                              hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).overlay,
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 32.0, 20.0, 12.0),
+                            ),
+                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            textAlign: TextAlign.start,
+                            maxLines: 4,
+                            keyboardType: TextInputType.multiline,
+                            validator: _model.phoneNumberControllerValidator
+                                .asValidator(context),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 10.0, 0.0, 0.0),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            height: 100.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              shape: BoxShape.rectangle,
+                            ),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'r1fjugu6' /* Phone number will be visible t... */,
+                              ),
+                              style: FlutterFlowTheme.of(context).bodyMedium,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                     Padding(
@@ -311,8 +395,12 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
 
                           final usersUpdateData = createUsersRecordData(
                             displayName: _model.userNameController.text,
-                            photoUrl: _model.uploadedFileUrl,
+                            photoUrl: _model.uploadedFileUrl != null &&
+                                    _model.uploadedFileUrl != ''
+                                ? _model.uploadedFileUrl
+                                : FFAppState().defaultAvatar,
                             userBio: _model.shortBioController.text,
+                            phoneNumber: _model.phoneNumberController.text,
                           );
                           await currentUserReference!.update(usersUpdateData);
 

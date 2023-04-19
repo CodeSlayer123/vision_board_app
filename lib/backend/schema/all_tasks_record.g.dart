@@ -96,6 +96,13 @@ class _$AllTasksRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(DateTime)));
     }
+    value = object.startDate;
+    if (value != null) {
+      result
+        ..add('startDate')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(DateTime)));
+    }
     value = object.ffRef;
     if (value != null) {
       result
@@ -166,6 +173,10 @@ class _$AllTasksRecordSerializer
           result.timeCreated = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime?;
           break;
+        case 'startDate':
+          result.startDate = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime?;
+          break;
         case 'Document__Reference__Field':
           result.ffRef = serializers.deserialize(value,
               specifiedType: const FullType(DocumentReference, const [
@@ -201,6 +212,8 @@ class _$AllTasksRecord extends AllTasksRecord {
   @override
   final DateTime? timeCreated;
   @override
+  final DateTime? startDate;
+  @override
   final DocumentReference<Object?>? ffRef;
 
   factory _$AllTasksRecord([void Function(AllTasksRecordBuilder)? updates]) =>
@@ -217,6 +230,7 @@ class _$AllTasksRecord extends AllTasksRecord {
       this.projectRef,
       this.completedAt,
       this.timeCreated,
+      this.startDate,
       this.ffRef})
       : super._();
 
@@ -242,6 +256,7 @@ class _$AllTasksRecord extends AllTasksRecord {
         projectRef == other.projectRef &&
         completedAt == other.completedAt &&
         timeCreated == other.timeCreated &&
+        startDate == other.startDate &&
         ffRef == other.ffRef;
   }
 
@@ -258,6 +273,7 @@ class _$AllTasksRecord extends AllTasksRecord {
     _$hash = $jc(_$hash, projectRef.hashCode);
     _$hash = $jc(_$hash, completedAt.hashCode);
     _$hash = $jc(_$hash, timeCreated.hashCode);
+    _$hash = $jc(_$hash, startDate.hashCode);
     _$hash = $jc(_$hash, ffRef.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -276,6 +292,7 @@ class _$AllTasksRecord extends AllTasksRecord {
           ..add('projectRef', projectRef)
           ..add('completedAt', completedAt)
           ..add('timeCreated', timeCreated)
+          ..add('startDate', startDate)
           ..add('ffRef', ffRef))
         .toString();
   }
@@ -328,6 +345,10 @@ class AllTasksRecordBuilder
   DateTime? get timeCreated => _$this._timeCreated;
   set timeCreated(DateTime? timeCreated) => _$this._timeCreated = timeCreated;
 
+  DateTime? _startDate;
+  DateTime? get startDate => _$this._startDate;
+  set startDate(DateTime? startDate) => _$this._startDate = startDate;
+
   DocumentReference<Object?>? _ffRef;
   DocumentReference<Object?>? get ffRef => _$this._ffRef;
   set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
@@ -349,6 +370,7 @@ class AllTasksRecordBuilder
       _projectRef = $v.projectRef;
       _completedAt = $v.completedAt;
       _timeCreated = $v.timeCreated;
+      _startDate = $v.startDate;
       _ffRef = $v.ffRef;
       _$v = null;
     }
@@ -384,6 +406,7 @@ class AllTasksRecordBuilder
               projectRef: projectRef,
               completedAt: completedAt,
               timeCreated: timeCreated,
+              startDate: startDate,
               ffRef: ffRef);
     } catch (_) {
       late String _$failedField;

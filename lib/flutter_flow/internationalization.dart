@@ -311,6 +311,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்..',
       'ur': 'یہاں تفصیل درج کریں..',
     },
+    'v8ktyj0f': {
+      'en': '(optional)',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '355g1zkk': {
+      'en': 'Enter phone number here..',
+      'hi': 'यहां विवरण दर्ज करें ..',
+      'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்..',
+      'ur': 'یہاں تفصیل درج کریں..',
+    },
+    'r1fjugu6': {
+      'en': 'Phone number will be visible to users within your community',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
     '7ve36dhv': {
       'en': 'Finish ',
       'hi': 'उपयोगकर्ता बनाएं और आमंत्रित करें',
@@ -542,7 +560,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்...',
       'ur': 'یہاں تفصیل درج کریں...',
     },
-    'mrhw8kjh': {
+    '8sub26sn': {
       'en': 'Not Started',
       'hi': '',
       'ta': '',
@@ -951,13 +969,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'مکمل',
     },
     '6vyvn2vc': {
-      'en': 'No visions have been completed yet. Keep believing!',
+      'en': 'No visions have been completed yet.\nKeep believing!',
       'hi': '',
       'ta': '',
       'ur': '',
     },
     'hmxr55qt': {
-      'en': 'Home',
+      'en': 'My Visions',
       'hi': 'घर',
       'ta': 'வீடு',
       'ur': 'گھر',
@@ -995,50 +1013,80 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'சுயவிவரத்தைத் திருத்து',
       'ur': 'پروفائل میں ترمیم کریں',
     },
+    '7ouresb2': {
+      'en': 'Join a Community',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
+    },
+    'u59r6d23': {
+      'en': 'Manage Community',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
+    },
+    'yy8g46gi': {
+      'en': 'Create a Community',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
+    },
     'w4vsr6hu': {
       'en': 'Log Out',
       'hi': 'लॉग आउट',
       'ta': 'வெளியேறு',
       'ur': 'لاگ آوٹ',
     },
-    'ikx4yuvm': {
+    '2ue4y5b6': {
       'en': 'Delete Account',
       'hi': '',
       'ta': '',
       'ur': '',
     },
     '3e1n01mf': {
-      'en': 'Home',
+      'en': 'My Profile',
       'hi': 'घर',
       'ta': 'வீடு',
       'ur': 'گھر',
     },
   },
-  // Main_teamPage
+  // manageCommunity
   {
-    'vf4ee69k': {
-      'en': 'My Team',
-      'hi': 'मेरी टीम',
-      'ta': 'என் அணி',
-      'ur': 'میری ٹیم',
+    '5oskislx': {
+      'en': 'Your Community\'s Invite Code:',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    'cqt7v5sb': {
-      'en': 'My Team',
-      'hi': 'मेरी टीम',
-      'ta': 'என் அணி',
-      'ur': 'میری ٹیم',
+    'amm128rv': {
+      'en': 'Community Members',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    'mop2evm0': {
-      'en': 'Search members...',
-      'hi': 'सदस्यों को खोजें...',
-      'ta': 'உறுப்பினர்களைத் தேடு...',
-      'ur': 'اراکین کو تلاش کریں...',
+    'aww45eq8': {
+      'en': 'Edit Community',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    '63wkxdr4': {
-      'en': 'Find Members',
-      'hi': 'सदस्य खोजें',
-      'ta': 'உறுப்பினர்களைக் கண்டறியவும்',
-      'ur': 'ممبرز تلاش کریں۔',
+    'lquzalhp': {
+      'en': 'Community Name',
+      'hi': 'पूरा नाम',
+      'ta': 'முழு பெயர்',
+      'ur': 'پورا نام',
+    },
+    'jk36wfto': {
+      'en': 'Enter description here..',
+      'hi': 'यहां विवरण दर्ज करें ..',
+      'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்..',
+      'ur': 'یہاں تفصیل درج کریں..',
+    },
+    '3r8a3smr': {
+      'en': 'Update Community',
+      'hi': 'उपयोगकर्ता बनाएं और आमंत्रित करें',
+      'ta': 'பயனரை உருவாக்கி அழைக்கவும்',
+      'ur': 'صارف بنائیں اور مدعو کریں۔',
     },
     'h2tjjlou': {
       'en': 'My Team',
@@ -1112,7 +1160,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'n142av4c': {
+    'hp50ejto': {
       'en': 'Short Term',
       'hi': '',
       'ta': '',
@@ -1124,35 +1172,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
+    '8gollttg': {
+      'en': 'Public',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '5z5b1zxp': {
+      'en': 'All users in the same orginazation will be able to see',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
     'gql7sgl9': {
       'en': 'Create Vision',
       'hi': 'प्रोजेक्ट बनाएं',
       'ta': 'திட்டத்தை உருவாக்கவும்',
       'ur': 'پروجیکٹ بنائیں',
     },
-    'abj4bb18': {
+    'cn7pslxf': {
       'en': 'Field is required',
-      'hi': 'ये स्थान भरा जाना है',
-      'ta': 'இந்த பகுதி அவசியமானது',
-      'ur': 'فیلڈ کی ضرورت ہے',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    'yyhmrk0i': {
-      'en': 'Field is required',
-      'hi': 'ये स्थान भरा जाना है',
-      'ta': 'இந்த பகுதி அவசியமானது',
-      'ur': 'فیلڈ کی ضرورت ہے',
+    'ep1avop3': {
+      'en': 'Please choose an option from the dropdown',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    'yepouzyh': {
+    'qwgs42m5': {
       'en': 'Field is required',
-      'hi': 'ये स्थान भरा जाना है',
-      'ta': 'இந்த பகுதி அவசியமானது',
-      'ur': 'فیلڈ کی ضرورت ہے',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    'qckve3hq': {
-      'en': 'Field is required',
-      'hi': 'ये स्थान भरा जाना है',
-      'ta': 'இந்த பகுதி அவசியமானது',
-      'ur': 'فیلڈ کی ضرورت ہے',
+    'b56jfgss': {
+      'en': 'Please choose an option from the dropdown',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
   },
   // editProfile
@@ -1326,7 +1386,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // editProject
   {
     '7wmlszlo': {
-      'en': 'Edit Project',
+      'en': 'Edit Vision',
       'hi': 'प्रोजेक्ट बनाएं',
       'ta': 'திட்டத்தை உருவாக்கவும்',
       'ur': 'پروجیکٹ بنائیں',
@@ -1357,6 +1417,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'nyhwsjue': {
       'en': 'Replace Image',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'ss2lio2l': {
+      'en': 'Public',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'xtrwpp4c': {
+      'en': 'All users in the same orginazation will be able to see',
       'hi': '',
       'ta': '',
       'ur': '',
@@ -2171,24 +2243,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'ixghv3rc': {
-      'en': 'Option 1',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    'mqpr7xrf': {
-      'en': 'Please select...',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    'bozmc8b5': {
-      'en': 'Search for an item...',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
     '3mjtxnss': {
       'en': 'No tasks have been added yet!',
       'hi': '',
@@ -2352,7 +2406,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': '',
     },
   },
-  // JoinCommunity
+  // joinCommunity
   {
     'ii6jilsg': {
       'en': 'Communities',
@@ -2394,7 +2448,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': '',
     },
     '0pkxuwj2': {
-      'en': 'Share your dreams',
+      'en': 'Create a Community!',
       'hi': '',
       'ta': '',
       'ur': '',
@@ -2411,12 +2465,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'முழு பெயர்',
       'ur': 'پورا نام',
     },
-    'rmid2uu0': {
-      'en': 'Enter description here..',
-      'hi': 'यहां विवरण दर्ज करें ..',
-      'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்..',
-      'ur': 'یہاں تفصیل درج کریں..',
-    },
     'l7nkmvu7': {
       'en': 'Create Community',
       'hi': 'उपयोगकर्ता बनाएं और आमंत्रित करें',
@@ -2430,88 +2478,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'گھر',
     },
   },
-  // ManageCommunity
-  {
-    'edhad39y': {
-      'en': 'Page Title',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    '1gkdai6g': {
-      'en': 'Home',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-  },
-  // CommunityPage
-  {
-    'xhrko9y5': {
-      'en': 'Our  Visions',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    'mzk1970e': {
-      'en': 'Help your community!',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    'e26kmn7t': {
-      'en': 'Create Project',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    'dnk9in7a': {
-      'en': 'Create Project',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    's48zkxhm': {
-      'en': 'Short Term Visions',
-      'hi': 'मेरा काम',
-      'ta': 'எனது பணிகள்',
-      'ur': 'میرے کام',
-    },
-    'r5ocotv3': {
-      'en': 'There are no current short term visions!',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    '2u4laz59': {
-      'en': 'Long Term Visions',
-      'hi': 'चालू',
-      'ta': 'செயல்பாட்டில் உள்ளது',
-      'ur': 'کام جاری ہے',
-    },
-    'lrf52knm': {
-      'en': 'There are no current long term visions!',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
-    'w2234uq5': {
-      'en': 'Home',
-      'hi': 'घर',
-      'ta': 'வீடு',
-      'ur': 'گھر',
-    },
-  },
-  // NewCommunity
+  // communityPage
   {
     'v59i6qvm': {
-      'en': 'Our  Visions',
+      'en': 'Community Visions',
       'hi': '',
       'ta': '',
       'ur': '',
     },
     '8daglvaa': {
       'en': 'Help your community!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'zpjgyrly': {
+      'en': 'Leave Community',
       'hi': '',
       'ta': '',
       'ur': '',
@@ -2523,97 +2505,424 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': '',
     },
     's4wbv7sv': {
-      'en': 'Short Term Visions',
+      'en': 'Short Term ',
       'hi': 'मेरा काम',
       'ta': 'எனது பணிகள்',
       'ur': 'میرے کام',
     },
-    'zxdk72cm': {
-      'en': 'You haven\'t joined any communites yet!',
-      'hi': '',
-      'ta': '',
-      'ur': '',
+    'uzw9o5pn': {
+      'en': 'Join a Community',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
     },
     'xrra6vyy': {
-      'en': 'Long Term Visions',
+      'en': 'Long Term ',
       'hi': 'चालू',
       'ta': 'செயல்பாட்டில் உள்ளது',
       'ur': 'کام جاری ہے',
     },
-    'cwe20h6u': {
-      'en': 'You haven\'t joined a community yet!',
-      'hi': '',
-      'ta': '',
-      'ur': '',
+    '0ewnf4w8': {
+      'en': 'Join a Community',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
     },
     'q5tyzm78': {
-      'en': 'Home',
+      'en': 'Communities',
       'hi': '',
       'ta': '',
       'ur': '',
     },
   },
-  // drawerNav
+  // editTask
   {
-    'j81no67g': {
-      'en': 'View',
+    'm66spit2': {
+      'en': 'Edit Task',
+      'hi': 'टास्क बनाएं',
+      'ta': 'பணியை உருவாக்கவும்',
+      'ur': 'ٹاسک بنائیں',
+    },
+    'ogbflv9p': {
+      'en': 'Task Name',
+      'hi': 'कार्य का नाम',
+      'ta': 'பணி பெயர்',
+      'ur': 'ٹاسک کا نام',
+    },
+    'aehhl13l': {
+      'en': 'Enter description here...',
+      'hi': 'यहां विवरण दर्ज करें...',
+      'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்...',
+      'ur': 'یہاں تفصیل درج کریں...',
+    },
+    'g0q8rwzs': {
+      'en': 'Not Started',
+      'hi': 'शुरू नहीं',
+      'ta': 'துவங்கவில்லை',
+      'ur': 'شروع نہیں کیا',
+    },
+    '28omy582': {
+      'en': 'In Progress',
+      'hi': 'चालू',
+      'ta': 'செயல்பாட்டில் உள்ளது',
+      'ur': 'کام جاری ہے',
+    },
+    'vkbbjc1p': {
+      'en': 'Select Status',
+      'hi': 'स्थिति का चयन करें',
+      'ta': 'நிலையைத் தேர்ந்தெடுக்கவும்',
+      'ur': 'اسٹیٹس کو منتخب کریں۔',
+    },
+    'kz5d6cs9': {
+      'en': 'Save Changes',
       'hi': '',
       'ta': '',
       'ur': '',
     },
-    '1281zly2': {
-      'en': '345',
-      'hi': '345',
-      'ta': '345',
-      'ur': '345',
+    '8sqeuh1q': {
+      'en': 'Delete Task',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    'ikdzucnf': {
-      'en': 'Community',
-      'hi': 'निम्नलिखित',
-      'ta': 'தொடர்ந்து',
-      'ur': 'درج ذیل',
+    'e7ajnfvf': {
+      'en': 'Please add a task name.',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    '0mvvm3zs': {
-      'en': '345',
-      'hi': '345',
-      'ta': '345',
-      'ur': '345',
+    'sa3esvqe': {
+      'en': 'Please enter at least 3 letters.',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
-    'ka33pk44': {
-      'en': 'Connections',
-      'hi': 'समर्थक',
-      'ta': 'பின்பற்றுபவர்கள்',
-      'ur': 'پیروکار',
+    'lw9iyvw9': {
+      'en': 'Please choose an option from the dropdown',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
+    'eo9mxcxs': {
+      'en': 'Field is required',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'la74geqb': {
+      'en': 'Please choose an option from the dropdown',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+  },
+  // finalizeCommunity
+  {
+    'ih03gsuw': {
+      'en': 'Communities',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '51kgk86z': {
+      'en': 'Describe your Community!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '9to51v5z': {
+      'en': 'Create Project',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'fmerf66g': {
+      'en': 'Enter description here..',
+      'hi': 'यहां विवरण दर्ज करें ..',
+      'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்..',
+      'ur': 'یہاں تفصیل درج کریں..',
+    },
+    '5foogqqf': {
+      'en': 'Your Community\'s Invite Code:',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '6vsli3bp': {
+      'en': 'Create Community',
+      'hi': 'उपयोगकर्ता बनाएं और आमंत्रित करें',
+      'ta': 'பயனரை உருவாக்கி அழைக்கவும்',
+      'ur': 'صارف بنائیں اور مدعو کریں۔',
+    },
+    'uy1vggon': {
+      'en': 'Home',
+      'hi': 'घर',
+      'ta': 'வீடு',
+      'ur': 'گھر',
+    },
+  },
+  // Main_teamPageCopy
+  {
+    '3mu7tgy5': {
+      'en': 'My Team',
+      'hi': 'मेरी टीम',
+      'ta': 'என் அணி',
+      'ur': 'میری ٹیم',
+    },
+    'kdicgx9j': {
+      'en': 'Find Members',
+      'hi': 'सदस्य खोजें',
+      'ta': 'உறுப்பினர்களைக் கண்டறியவும்',
+      'ur': 'ممبرز تلاش کریں۔',
+    },
+    'es7kahnt': {
+      'en': 'Search members...',
+      'hi': 'सदस्यों को खोजें...',
+      'ta': 'உறுப்பினர்களைத் தேடு...',
+      'ur': 'اراکین کو تلاش کریں...',
+    },
+    'u91x7ftu': {
+      'en': 'Community Members',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'c5fouh8u': {
+      'en': 'Example 3',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'e93qcjp7': {
+      'en': 'Tab View 3',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'llwa5ins': {
+      'en': 'My Team',
+      'hi': 'मेरी टीम',
+      'ta': 'என் அணி',
+      'ur': 'میری ٹیم',
+    },
+  },
+  // viewTask
+  {
+    '0kcf0uzy': {
+      'en': 'View Task',
+      'hi': 'टास्क बनाएं',
+      'ta': 'பணியை உருவாக்கவும்',
+      'ur': 'ٹاسک بنائیں',
+    },
+    'p1vwqvkg': {
+      'en': 'Task Name',
+      'hi': 'कार्य का नाम',
+      'ta': 'பணி பெயர்',
+      'ur': 'ٹاسک کا نام',
+    },
+    'qxke6pw1': {
+      'en': 'Enter description here...',
+      'hi': 'यहां विवरण दर्ज करें...',
+      'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்...',
+      'ur': 'یہاں تفصیل درج کریں...',
+    },
+    'fyqoxujs': {
+      'en': 'Start Date:',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'qgliqwiw': {
+      'en': 'Due Date:',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '18b4r6ay': {
+      'en': 'Please add a task name.',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '5dw5u7n6': {
+      'en': 'Please enter at least 3 letters.',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'tzuoa3eo': {
+      'en': 'Please choose an option from the dropdown',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'ntmourwc': {
+      'en': 'Field is required',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'wzulirdl': {
+      'en': 'Please choose an option from the dropdown',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+  },
+  // myVisionsCopy
+  {
+    'itek3ndq': {
+      'en': 'My Visions',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '3lywg6tv': {
+      'en': 'A list of your visions below.',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '2qrb5uhw': {
+      'en': 'Create Project',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'dqovebop': {
+      'en': 'Short Term Visions',
+      'hi': 'मेरा काम',
+      'ta': 'எனது பணிகள்',
+      'ur': 'میرے کام',
+    },
+    '64mlaxst': {
+      'en': 'There are no current short term visions!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '3feut3dg': {
+      'en': 'Long Term Visions',
+      'hi': 'चालू',
+      'ta': 'செயல்பாட்டில் உள்ளது',
+      'ur': 'کام جاری ہے',
+    },
+    '2zg87aas': {
+      'en': 'There are no current long term visions!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '2gyyf8be': {
+      'en': 'Complete',
+      'hi': 'पूरा',
+      'ta': 'முழுமை',
+      'ur': 'مکمل',
+    },
+    'xq49g02d': {
+      'en': 'No visions have been completed yet. Keep believing!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'nbgrxgzi': {
+      'en': 'My Visions',
+      'hi': 'घर',
+      'ta': 'வீடு',
+      'ur': 'گھر',
+    },
+  },
+  // joinCommunityStepTwo
+  {
+    'fe34c34v': {
+      'en': 'Communities',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'ezlgd70x': {
+      'en': 'Create Project',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'm0b1m3q3': {
+      'en': 'None found!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '589343fx': {
+      'en': 'Join!',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
+    },
+    'qcywvxo1': {
+      'en': 'Home',
+      'hi': 'घर',
+      'ta': 'வீடு',
+      'ur': 'گھر',
+    },
+  },
+  // viewUser
+  {
+    '4n9w3jv2': {
+      'en': 'Message',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '2hd9brja': {
+      'en': 'User Description',
+      'hi': 'टीम बायो',
+      'ta': 'டீம் பயோ',
+      'ur': 'ٹیم بائیو',
+    },
+    'phoc7q62': {
+      'en': 'Home',
+      'hi': 'घर',
+      'ta': 'வீடு',
+      'ur': 'گھر',
+    },
+  },
+  // drawerNav
+  {
     'xnmol3vm': {
-      'en': 'Community Visions',
+      'en': 'My Visions',
       'hi': 'मेरी प्रोफाइल',
       'ta': 'என் சுயவிவரம்',
       'ur': 'میری پروفائل',
     },
     'tgp9100p': {
-      'en': 'My Vision Board',
+      'en': 'My Communities',
       'hi': 'मेरी प्रोफाइल',
       'ta': 'என் சுயவிவரம்',
       'ur': 'میری پروفائل',
     },
     'gvsvhzns': {
-      'en': 'Team',
+      'en': 'My Profile',
       'hi': 'मेरी टीम',
       'ta': 'எனது அணிகள்',
       'ur': 'میری ٹیمیں',
     },
-    'r33amlko': {
-      'en': 'About',
-      'hi': 'के बारे में',
-      'ta': 'பற்றி',
-      'ur': 'کے بارے میں',
+    '8czmkd58': {
+      'en': 'Join a Community',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
     },
-    'hfpu6vi1': {
-      'en': 'Rate App',
-      'hi': 'एप्प का मूल्यांकन',
-      'ta': 'பயன்பாட்டை மதிப்பிடவும்',
-      'ur': 'ایپ کی درجہ بندی کریں۔',
+    'rqwbm1db': {
+      'en': 'Manage Community',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
+    },
+    'ho48prvt': {
+      'en': 'Create a Community',
+      'hi': 'प्रोफ़ाइल संपादित करें',
+      'ta': 'சுயவிவரத்தைத் திருத்து',
+      'ur': 'پروفائل میں ترمیم کریں',
     },
     'of8ozb94': {
       'en': 'Log Out',

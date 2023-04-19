@@ -22,8 +22,8 @@ export '/pages/a_pages/project_details_page/project_details_page_widget.dart'
     show ProjectDetailsPageWidget;
 export '/pages/a_pages/my_visions/my_visions_widget.dart' show MyVisionsWidget;
 export '/pages/a_pages/my_profile/my_profile_widget.dart' show MyProfileWidget;
-export '/pages/main_team_page/main_team_page_widget.dart'
-    show MainTeamPageWidget;
+export '/pages/community_pages/manage_community/manage_community_widget.dart'
+    show ManageCommunityWidget;
 export '/pages/search_members/search_members_widget.dart'
     show SearchMembersWidget;
 export '/pages/a_pages/create_project/create_project_widget.dart'
@@ -62,9 +62,16 @@ export '/pages/community_pages/join_community/join_community_widget.dart'
     show JoinCommunityWidget;
 export '/pages/community_pages/create_community/create_community_widget.dart'
     show CreateCommunityWidget;
-export '/pages/community_pages/manage_community/manage_community_widget.dart'
-    show ManageCommunityWidget;
 export '/pages/community_pages/community_page/community_page_widget.dart'
     show CommunityPageWidget;
-export '/pages/community_pages/new_community/new_community_widget.dart'
-    show NewCommunityWidget;
+export '/pages/a_pages/edit_task/edit_task_widget.dart' show EditTaskWidget;
+export '/pages/community_pages/finalize_community/finalize_community_widget.dart'
+    show FinalizeCommunityWidget;
+export '/pages/main_team_page_copy/main_team_page_copy_widget.dart'
+    show MainTeamPageCopyWidget;
+export '/pages/a_pages/view_task/view_task_widget.dart' show ViewTaskWidget;
+export '/pages/a_pages/my_visions_copy/my_visions_copy_widget.dart'
+    show MyVisionsCopyWidget;
+export '/pages/community_pages/join_community_step_two/join_community_step_two_widget.dart'
+    show JoinCommunityStepTwoWidget;
+export '/pages/a_pages/view_user/view_user_widget.dart' show ViewUserWidget;

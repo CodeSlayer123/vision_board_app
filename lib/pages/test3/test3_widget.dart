@@ -1,4 +1,3 @@
-import '/components/vision_cards/vision_cards_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -61,15 +60,7 @@ class _Test3WidgetState extends State<Test3Widget> {
         body: SafeArea(
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [
-              Expanded(
-                child: wrapWithModel(
-                  model: _model.visionCardsModel,
-                  updateCallback: () => setState(() {}),
-                  child: VisionCardsWidget(),
-                ),
-              ),
-            ],
+            children: [],
           ),
         ),
       ),

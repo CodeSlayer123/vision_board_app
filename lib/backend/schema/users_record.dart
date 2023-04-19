@@ -47,6 +47,8 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
 
   int? get completedProjects;
 
+  bool? get hasCompletedProjects;
+
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference? get ffRef;
   DocumentReference get reference => ffRef!;
@@ -65,7 +67,8 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..shortTerms = 0
     ..longTerms = 0
     ..communities = ListBuilder()
-    ..completedProjects = 0;
+    ..completedProjects = 0
+    ..hasCompletedProjects = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('users');
@@ -103,6 +106,7 @@ Map<String, dynamic> createUsersRecordData({
   int? shortTerms,
   int? longTerms,
   int? completedProjects,
+  bool? hasCompletedProjects,
 }) {
   final firestoreData = serializers.toFirestore(
     UsersRecord.serializer,
@@ -123,7 +127,8 @@ Map<String, dynamic> createUsersRecordData({
         ..shortTerms = shortTerms
         ..longTerms = longTerms
         ..communities = null
-        ..completedProjects = completedProjects,
+        ..completedProjects = completedProjects
+        ..hasCompletedProjects = hasCompletedProjects,
     ),
   );
 

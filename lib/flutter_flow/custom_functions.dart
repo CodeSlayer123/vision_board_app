@@ -35,6 +35,10 @@ double progressBarValue(
           .collection('users')
           .doc(userRef)
           .update({'completedProjects': FieldValue.increment(1)});
+      FirebaseFirestore.instance
+          .collection('users')
+          .doc(userRef)
+          .update({'hasCompletedProjects': true});
     }
     //returns 1 because project has been completed
     return 1.0;

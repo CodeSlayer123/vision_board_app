@@ -31,6 +31,8 @@ abstract class AllTasksRecord
 
   DateTime? get timeCreated;
 
+  DateTime? get startDate;
+
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference? get ffRef;
   DocumentReference get reference => ffRef!;
@@ -73,6 +75,7 @@ Map<String, dynamic> createAllTasksRecordData({
   DocumentReference? projectRef,
   DateTime? completedAt,
   DateTime? timeCreated,
+  DateTime? startDate,
 }) {
   final firestoreData = serializers.toFirestore(
     AllTasksRecord.serializer,
@@ -87,7 +90,8 @@ Map<String, dynamic> createAllTasksRecordData({
         ..status = status
         ..projectRef = projectRef
         ..completedAt = completedAt
-        ..timeCreated = timeCreated,
+        ..timeCreated = timeCreated
+        ..startDate = startDate,
     ),
   );
 

@@ -116,6 +116,13 @@ class _$ProjectsRecordSerializer
         ..add(
             serializers.serialize(value, specifiedType: const FullType(bool)));
     }
+    value = object.isPublic;
+    if (value != null) {
+      result
+        ..add('isPublic')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
     value = object.ffRef;
     if (value != null) {
       result
@@ -200,6 +207,10 @@ class _$ProjectsRecordSerializer
           result.completed = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool?;
           break;
+        case 'isPublic':
+          result.isPublic = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
         case 'Document__Reference__Field':
           result.ffRef = serializers.deserialize(value,
               specifiedType: const FullType(DocumentReference, const [
@@ -241,6 +252,8 @@ class _$ProjectsRecord extends ProjectsRecord {
   @override
   final bool? completed;
   @override
+  final bool? isPublic;
+  @override
   final DocumentReference<Object?>? ffRef;
 
   factory _$ProjectsRecord([void Function(ProjectsRecordBuilder)? updates]) =>
@@ -260,6 +273,7 @@ class _$ProjectsRecord extends ProjectsRecord {
       this.gallery,
       this.term,
       this.completed,
+      this.isPublic,
       this.ffRef})
       : super._();
 
@@ -288,6 +302,7 @@ class _$ProjectsRecord extends ProjectsRecord {
         gallery == other.gallery &&
         term == other.term &&
         completed == other.completed &&
+        isPublic == other.isPublic &&
         ffRef == other.ffRef;
   }
 
@@ -307,6 +322,7 @@ class _$ProjectsRecord extends ProjectsRecord {
     _$hash = $jc(_$hash, gallery.hashCode);
     _$hash = $jc(_$hash, term.hashCode);
     _$hash = $jc(_$hash, completed.hashCode);
+    _$hash = $jc(_$hash, isPublic.hashCode);
     _$hash = $jc(_$hash, ffRef.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -328,6 +344,7 @@ class _$ProjectsRecord extends ProjectsRecord {
           ..add('gallery', gallery)
           ..add('term', term)
           ..add('completed', completed)
+          ..add('isPublic', isPublic)
           ..add('ffRef', ffRef))
         .toString();
   }
@@ -393,6 +410,10 @@ class ProjectsRecordBuilder
   bool? get completed => _$this._completed;
   set completed(bool? completed) => _$this._completed = completed;
 
+  bool? _isPublic;
+  bool? get isPublic => _$this._isPublic;
+  set isPublic(bool? isPublic) => _$this._isPublic = isPublic;
+
   DocumentReference<Object?>? _ffRef;
   DocumentReference<Object?>? get ffRef => _$this._ffRef;
   set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
@@ -417,6 +438,7 @@ class ProjectsRecordBuilder
       _gallery = $v.gallery?.toBuilder();
       _term = $v.term;
       _completed = $v.completed;
+      _isPublic = $v.isPublic;
       _ffRef = $v.ffRef;
       _$v = null;
     }
@@ -455,6 +477,7 @@ class ProjectsRecordBuilder
               gallery: _gallery?.build(),
               term: term,
               completed: completed,
+              isPublic: isPublic,
               ffRef: ffRef);
     } catch (_) {
       late String _$failedField;

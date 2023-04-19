@@ -43,6 +43,20 @@ class FFAppState extends ChangeNotifier {
   set placeHolderImage(String _value) {
     _placeHolderImage = _value;
   }
+
+  DocumentReference? _defaultCommunity =
+      FirebaseFirestore.instance.doc('/organizations/0cEcaBnTd1gpUKuPZRBo');
+  DocumentReference? get defaultCommunity => _defaultCommunity;
+  set defaultCommunity(DocumentReference? _value) {
+    _defaultCommunity = _value;
+  }
+
+  String _defaultAvatar =
+      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/clone-kanban-app-olnum5/assets/l8hthxe767im/Portrait_Placeholder.png';
+  String get defaultAvatar => _defaultAvatar;
+  set defaultAvatar(String _value) {
+    _defaultAvatar = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

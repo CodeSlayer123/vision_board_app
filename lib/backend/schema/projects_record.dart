@@ -37,6 +37,8 @@ abstract class ProjectsRecord
 
   bool? get completed;
 
+  bool? get isPublic;
+
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference? get ffRef;
   DocumentReference get reference => ffRef!;
@@ -50,7 +52,8 @@ abstract class ProjectsRecord
     ..image = ''
     ..gallery = ListBuilder()
     ..term = ''
-    ..completed = false;
+    ..completed = false
+    ..isPublic = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('projects');
@@ -85,6 +88,7 @@ Map<String, dynamic> createProjectsRecordData({
   String? image,
   String? term,
   bool? completed,
+  bool? isPublic,
 }) {
   final firestoreData = serializers.toFirestore(
     ProjectsRecord.serializer,
@@ -102,7 +106,8 @@ Map<String, dynamic> createProjectsRecordData({
         ..image = image
         ..gallery = null
         ..term = term
-        ..completed = completed,
+        ..completed = completed
+        ..isPublic = isPublic,
     ),
   );
 

@@ -17,9 +17,9 @@ class CreateProjectModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for taskName widget.
-  TextEditingController? taskNameController;
-  String? Function(BuildContext, String?)? taskNameControllerValidator;
+  // State field(s) for visionName widget.
+  TextEditingController? visionNameController;
+  String? Function(BuildContext, String?)? visionNameControllerValidator;
   // State field(s) for description widget.
   TextEditingController? descriptionController;
   String? Function(BuildContext, String?)? descriptionControllerValidator;
@@ -31,12 +31,15 @@ class CreateProjectModel extends FlutterFlowModel {
       FFUploadedFile(bytes: Uint8List.fromList([]));
   String uploadedFileUrl = '';
 
+  // State field(s) for SwitchListTile widget.
+  bool? switchListTileValue;
+
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}
 
   void dispose() {
-    taskNameController?.dispose();
+    visionNameController?.dispose();
     descriptionController?.dispose();
   }
 

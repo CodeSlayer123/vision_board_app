@@ -7,12 +7,12 @@ import '/components/modal_project/modal_project_widget.dart';
 import '/components/user_card/user_card_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -22,10 +22,6 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
 class JoinCommunityModel extends FlutterFlowModel {
-  ///  Local state fields for this page.
-
-  String? inviteCode;
-
   ///  State fields for stateful widgets in this page.
 
   // Model for drawerNav component.
@@ -34,11 +30,11 @@ class JoinCommunityModel extends FlutterFlowModel {
   late WebNavModel webNavModel1;
   // Model for userCard component.
   late UserCardModel userCardModel;
-  // Model for WebNav component.
-  late WebNavModel webNavModel2;
   // State field(s) for TextField widget.
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // Model for WebNav component.
+  late WebNavModel webNavModel2;
 
   /// Initialization and disposal methods.
 
@@ -53,8 +49,8 @@ class JoinCommunityModel extends FlutterFlowModel {
     drawerNavModel.dispose();
     webNavModel1.dispose();
     userCardModel.dispose();
-    webNavModel2.dispose();
     textController?.dispose();
+    webNavModel2.dispose();
   }
 
   /// Additional helper methods are added here.

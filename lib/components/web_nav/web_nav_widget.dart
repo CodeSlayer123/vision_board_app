@@ -270,7 +270,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
               child: InkWell(
                 onTap: () async {
                   context.pushNamed(
-                    'Main_teamPage',
+                    'manageCommunity',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
@@ -333,7 +333,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   builder: (context) => InkWell(
                     onTap: () async {
                       context.pushNamed(
-                        'Main_teamPage',
+                        'manageCommunity',
                         extra: <String, dynamic>{
                           kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,

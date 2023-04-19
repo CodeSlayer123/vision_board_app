@@ -8,6 +8,7 @@ import '/components/notification_trigger/notification_trigger_widget.dart';
 import '/components/user_card/user_card_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -17,7 +18,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +25,13 @@ import 'my_visions_model.dart';
 export 'my_visions_model.dart';
 
 class MyVisionsWidget extends StatefulWidget {
-  const MyVisionsWidget({Key? key}) : super(key: key);
+  const MyVisionsWidget({
+    Key? key,
+    int? index,
+  })  : this.index = index ?? 0,
+        super(key: key);
+
+  final int index;
 
   @override
   _MyVisionsWidgetState createState() => _MyVisionsWidgetState();
@@ -92,30 +98,6 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        floatingActionButton: Visibility(
-          visible: MediaQuery.of(context).size.width <= 764.0,
-          child: FloatingActionButton(
-            onPressed: () async {
-              context.pushNamed(
-                'createProject',
-                extra: <String, dynamic>{
-                  kTransitionInfoKey: TransitionInfo(
-                    hasTransition: true,
-                    transitionType: PageTransitionType.bottomToTop,
-                    duration: Duration(milliseconds: 250),
-                  ),
-                },
-              );
-            },
-            backgroundColor: Color(0xFFFA8072),
-            elevation: 8.0,
-            child: Icon(
-              Icons.create_new_folder,
-              color: Colors.white,
-              size: 32.0,
-            ),
-          ),
-        ),
         drawer: Drawer(
           elevation: 16.0,
           child: wrapWithModel(
@@ -750,7 +732,12 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
                   ),
                   child: DefaultTabController(
                     length: 3,
-                    initialIndex: 0,
+                    initialIndex: min(
+                        valueOrDefault<int>(
+                          widget.index,
+                          0,
+                        ),
+                        2),
                     child: Column(
                       children: [
                         TabBar(
@@ -910,6 +897,25 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
                                         ),
                                     ],
                                   ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.9, 0.75),
+                                    child: FlutterFlowIconButton(
+                                      borderColor: Colors.transparent,
+                                      borderRadius: 30.0,
+                                      borderWidth: 8.0,
+                                      buttonSize: 60.0,
+                                      fillColor: Color(0xFFFA8072),
+                                      icon: Icon(
+                                        Icons.add,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 40.0,
+                                      ),
+                                      onPressed: () async {
+                                        context.pushNamed('createProject');
+                                      },
+                                    ),
+                                  ),
                                 ],
                               ),
                               Stack(
@@ -983,7 +989,6 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
                                                   staggeredViewProjectsRecord
                                                       .image!,
                                                   width: 100.0,
-                                                  height: 100.0,
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1032,6 +1037,24 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
                                         ),
                                     ],
                                   ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.9, 0.75),
+                                    child: FlutterFlowIconButton(
+                                      borderRadius: 50.0,
+                                      borderWidth: 1.0,
+                                      buttonSize: 60.0,
+                                      fillColor: Color(0xFFFA8072),
+                                      icon: Icon(
+                                        Icons.add,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 40.0,
+                                      ),
+                                      onPressed: () async {
+                                        context.pushNamed('createProject');
+                                      },
+                                    ),
+                                  ),
                                 ],
                               ),
                               Stack(
@@ -1074,6 +1097,8 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
                                           );
                                         }
                                         return MasonryGridView.count(
+                                          physics:
+                                              const NeverScrollableScrollPhysics(),
                                           crossAxisCount: 2,
                                           crossAxisSpacing: 10.0,
                                           mainAxisSpacing: 10.0,
@@ -1109,8 +1134,7 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
                                                   staggeredViewProjectsRecord
                                                       .image!,
                                                   width: 100.0,
-                                                  height: 100.0,
-                                                  fit: BoxFit.none,
+                                                  fit: BoxFit.cover,
                                                 ),
                                               ),
                                             );
@@ -1122,15 +1146,14 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      if (valueOrDefault(
-                                              currentUserDocument
-                                                  ?.completedProjects,
-                                              0) <
-                                          1)
+                                      if (!valueOrDefault<bool>(
+                                          currentUserDocument
+                                              ?.hasCompletedProjects,
+                                          false))
                                         Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20.0, 100.0, 0.0, 0.0),
+                                                  35.0, 100.0, 0.0, 0.0),
                                           child: AuthUserStreamWidget(
                                             builder: (context) => Text(
                                               FFLocalizations.of(context)
@@ -1158,6 +1181,24 @@ class _MyVisionsWidgetState extends State<MyVisionsWidget>
                                           ),
                                         ),
                                     ],
+                                  ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.9, 0.75),
+                                    child: FlutterFlowIconButton(
+                                      borderColor: Colors.transparent,
+                                      borderRadius: 30.0,
+                                      buttonSize: 60.0,
+                                      fillColor: Color(0xFFFA8072),
+                                      icon: Icon(
+                                        Icons.add,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 40.0,
+                                      ),
+                                      onPressed: () async {
+                                        context.pushNamed('createProject');
+                                      },
+                                    ),
                                   ),
                                 ],
                               ),

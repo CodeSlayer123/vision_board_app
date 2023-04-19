@@ -135,6 +135,13 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
         ..add('completedProjects')
         ..add(serializers.serialize(value, specifiedType: const FullType(int)));
     }
+    value = object.hasCompletedProjects;
+    if (value != null) {
+      result
+        ..add('hasCompletedProjects')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
     value = object.ffRef;
     if (value != null) {
       result
@@ -229,6 +236,10 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
           result.completedProjects = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int?;
           break;
+        case 'hasCompletedProjects':
+          result.hasCompletedProjects = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
         case 'Document__Reference__Field':
           result.ffRef = serializers.deserialize(value,
               specifiedType: const FullType(DocumentReference, const [
@@ -276,6 +287,8 @@ class _$UsersRecord extends UsersRecord {
   @override
   final int? completedProjects;
   @override
+  final bool? hasCompletedProjects;
+  @override
   final DocumentReference<Object?>? ffRef;
 
   factory _$UsersRecord([void Function(UsersRecordBuilder)? updates]) =>
@@ -298,6 +311,7 @@ class _$UsersRecord extends UsersRecord {
       this.longTerms,
       this.communities,
       this.completedProjects,
+      this.hasCompletedProjects,
       this.ffRef})
       : super._();
 
@@ -328,6 +342,7 @@ class _$UsersRecord extends UsersRecord {
         longTerms == other.longTerms &&
         communities == other.communities &&
         completedProjects == other.completedProjects &&
+        hasCompletedProjects == other.hasCompletedProjects &&
         ffRef == other.ffRef;
   }
 
@@ -350,6 +365,7 @@ class _$UsersRecord extends UsersRecord {
     _$hash = $jc(_$hash, longTerms.hashCode);
     _$hash = $jc(_$hash, communities.hashCode);
     _$hash = $jc(_$hash, completedProjects.hashCode);
+    _$hash = $jc(_$hash, hasCompletedProjects.hashCode);
     _$hash = $jc(_$hash, ffRef.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -374,6 +390,7 @@ class _$UsersRecord extends UsersRecord {
           ..add('longTerms', longTerms)
           ..add('communities', communities)
           ..add('completedProjects', completedProjects)
+          ..add('hasCompletedProjects', hasCompletedProjects)
           ..add('ffRef', ffRef))
         .toString();
   }
@@ -451,6 +468,11 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
   set completedProjects(int? completedProjects) =>
       _$this._completedProjects = completedProjects;
 
+  bool? _hasCompletedProjects;
+  bool? get hasCompletedProjects => _$this._hasCompletedProjects;
+  set hasCompletedProjects(bool? hasCompletedProjects) =>
+      _$this._hasCompletedProjects = hasCompletedProjects;
+
   DocumentReference<Object?>? _ffRef;
   DocumentReference<Object?>? get ffRef => _$this._ffRef;
   set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
@@ -478,6 +500,7 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
       _longTerms = $v.longTerms;
       _communities = $v.communities?.toBuilder();
       _completedProjects = $v.completedProjects;
+      _hasCompletedProjects = $v.hasCompletedProjects;
       _ffRef = $v.ffRef;
       _$v = null;
     }
@@ -519,6 +542,7 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
               longTerms: longTerms,
               communities: _communities?.build(),
               completedProjects: completedProjects,
+              hasCompletedProjects: hasCompletedProjects,
               ffRef: ffRef);
     } catch (_) {
       late String _$failedField;

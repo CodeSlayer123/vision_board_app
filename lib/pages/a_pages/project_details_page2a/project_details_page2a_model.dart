@@ -4,13 +4,11 @@ import '/backend/firebase_storage/storage.dart';
 import '/components/empty_notifications/empty_notifications_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_count_controller.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'dart:async';
@@ -34,9 +32,6 @@ class ProjectDetailsPage2aModel extends FlutterFlowModel {
   int? countControllerValue1;
   // State field(s) for CountController widget.
   int? countControllerValue2;
-  // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
   // State field(s) for CheckboxListTile widget.
 
   Map<AllTasksRecord, bool> checkboxListTileValueMap = {};

@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -72,10 +73,10 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
           title: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
-                '7wmlszlo' /* Edit Project */,
+                '7wmlszlo' /* Edit Vision */,
               ),
               style: FlutterFlowTheme.of(context).displaySmall.override(
                     fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
@@ -98,7 +99,21 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                   size: 30.0,
                 ),
                 onPressed: () async {
-                  context.pop();
+                  if (Navigator.of(context).canPop()) {
+                    context.pop();
+                  }
+                  context.pushNamed(
+                    'projectDetailsPage2a',
+                    queryParams: {
+                      'projectRef': serializeParam(
+                        widget.projectRef,
+                        ParamType.Document,
+                      ),
+                    }.withoutNulls,
+                    extra: <String, dynamic>{
+                      'projectRef': widget.projectRef,
+                    },
+                  );
                 },
               ),
             ),
@@ -118,25 +133,23 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 5.0, 0.0, 0.0),
-                          child: Container(
-                            width: double.infinity,
-                            constraints: BoxConstraints(
-                              maxWidth: 570.0,
-                            ),
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 5.0, 0.0, 0.0),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 5.0, 0.0, 0.0),
+                            child: Container(
+                              width: double.infinity,
+                              constraints: BoxConstraints(
+                                maxWidth: 570.0,
+                              ),
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -471,180 +484,282 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                                       ),
                                     ),
                                   ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: SwitchListTile(
+                                          value: _model.switchListTileValue ??=
+                                              widget.projectRef!.isPublic!,
+                                          onChanged: (newValue) async {
+                                            setState(() =>
+                                                _model.switchListTileValue =
+                                                    newValue!);
+                                          },
+                                          title: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'ss2lio2l' /* Public */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineSmall,
+                                          ),
+                                          subtitle: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'xtrwpp4c' /* All users in the same orginaza... */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .titleSmall
+                                                .override(
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmallFamily,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallFamily),
+                                                ),
+                                          ),
+                                          tileColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                          activeColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondary,
+                                          dense: false,
+                                          controlAffinity:
+                                              ListTileControlAffinity.leading,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ),
                           ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 75.0, 0.0, 8.0),
-                              child: FFButtonWidget(
-                                onPressed: () async {
-                                  // This creates the project for tasks to be assigned to.
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 15.0, 0.0, 8.0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    // This creates the project for tasks to be assigned to.
 
-                                  final projectsUpdateData1 =
-                                      createProjectsRecordData(
-                                    projectName: _model.taskNameController.text,
-                                    description:
-                                        _model.descriptionController.text,
-                                    term: _model.choiceChipsValue,
-                                  );
-                                  await widget.projectRef!.reference
-                                      .update(projectsUpdateData1);
-                                  if (_model.uploadedFileUrl != null &&
-                                      _model.uploadedFileUrl != '') {
-                                    final projectsUpdateData2 =
+                                    final projectsUpdateData1 =
                                         createProjectsRecordData(
-                                      image: _model.uploadedFileUrl,
+                                      projectName:
+                                          _model.taskNameController.text,
+                                      description:
+                                          _model.descriptionController.text,
+                                      term: _model.choiceChipsValue,
+                                      isPublic: _model.switchListTileValue,
                                     );
                                     await widget.projectRef!.reference
-                                        .update(projectsUpdateData2);
-                                  }
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(
-                                        'You have updated the project!',
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleMedium
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleMediumFamily,
-                                              color: Color(0x00000000),
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleMediumFamily),
-                                            ),
-                                      ),
-                                      duration: Duration(milliseconds: 4000),
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .alternate,
-                                    ),
-                                  );
-
-                                  context.pushNamed(
-                                    'projectDetailsPage2a',
-                                    queryParams: {
-                                      'projectRef': serializeParam(
-                                        widget.projectRef,
-                                        ParamType.Document,
-                                      ),
-                                    }.withoutNulls,
-                                    extra: <String, dynamic>{
-                                      'projectRef': widget.projectRef,
-                                    },
-                                  );
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  '57dpf0bb' /* Save Changes */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 270.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFFFA8072),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .titleSmallFamily,
-                                        color: Colors.white,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmallFamily),
-                                      ),
-                                  elevation: 3.0,
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(50.0),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 8.0, 0.0, 24.0),
-                              child: FFButtonWidget(
-                                onPressed: () async {
-                                  await showDialog(
-                                    context: context,
-                                    builder: (alertDialogContext) {
-                                      return AlertDialog(
-                                        title: Text('Are you sure?'),
-                                        content: Text(
-                                            'Are you sure you want to delete this project? This action cannot be undone'),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () => Navigator.pop(
-                                                alertDialogContext),
-                                            child: Text('Ok'),
-                                          ),
-                                        ],
+                                        .update(projectsUpdateData1);
+                                    if (_model.uploadedFileUrl != null &&
+                                        _model.uploadedFileUrl != '') {
+                                      final projectsUpdateData2 =
+                                          createProjectsRecordData(
+                                        image: _model.uploadedFileUrl,
                                       );
-                                    },
-                                  );
-                                  if (true) {
-                                    await widget.projectRef!.reference.delete();
-
-                                    context.pushNamed('createProject');
-                                  } else {
-                                    return;
-                                  }
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  '3uigqoh0' /* Delete Project */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 270.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).error,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .titleSmallFamily,
-                                        color: Colors.white,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmallFamily),
+                                      await widget.projectRef!.reference
+                                          .update(projectsUpdateData2);
+                                    }
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'You have updated the project!',
+                                          style: FlutterFlowTheme.of(context)
+                                              .titleMedium
+                                              .override(
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily,
+                                                color: Color(0x00000000),
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleMediumFamily),
+                                              ),
+                                        ),
+                                        duration: Duration(milliseconds: 4000),
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context)
+                                                .alternate,
                                       ),
-                                  borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context).error,
-                                    width: 1.0,
+                                    );
+                                    if (Navigator.of(context).canPop()) {
+                                      context.pop();
+                                    }
+                                    context.pushNamed(
+                                      'projectDetailsPage2a',
+                                      queryParams: {
+                                        'projectRef': serializeParam(
+                                          widget.projectRef,
+                                          ParamType.Document,
+                                        ),
+                                      }.withoutNulls,
+                                      extra: <String, dynamic>{
+                                        'projectRef': widget.projectRef,
+                                      },
+                                    );
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    '57dpf0bb' /* Save Changes */,
                                   ),
-                                  borderRadius: BorderRadius.circular(50.0),
+                                  options: FFButtonOptions(
+                                    width: 270.0,
+                                    height: 50.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color:
+                                        FlutterFlowTheme.of(context).secondary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmallFamily,
+                                          color: Colors.white,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily),
+                                        ),
+                                    elevation: 3.0,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(50.0),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 8.0, 0.0, 24.0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    var confirmDialogResponse =
+                                        await showDialog<bool>(
+                                              context: context,
+                                              builder: (alertDialogContext) {
+                                                return AlertDialog(
+                                                  title: Text('Delete Vision?'),
+                                                  content: Text(
+                                                      'Are you sure you want t delete this vision? This action can not be undone'),
+                                                  actions: [
+                                                    TextButton(
+                                                      onPressed: () =>
+                                                          Navigator.pop(
+                                                              alertDialogContext,
+                                                              false),
+                                                      child: Text('Cancel'),
+                                                    ),
+                                                    TextButton(
+                                                      onPressed: () =>
+                                                          Navigator.pop(
+                                                              alertDialogContext,
+                                                              true),
+                                                      child: Text('Confirm'),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
+                                            ) ??
+                                            false;
+                                    if (true) {
+                                      await widget.projectRef!.reference
+                                          .delete();
+                                      await actions.deleteProjectTasks(
+                                        widget.projectRef!.reference,
+                                      );
+                                      if (widget.projectRef!.term ==
+                                          'Short Term') {
+                                        final usersUpdateData1 = {
+                                          'shortTerms':
+                                              FieldValue.increment(-(1)),
+                                        };
+                                        await currentUserReference!
+                                            .update(usersUpdateData1);
+                                      } else {
+                                        final usersUpdateData2 = {
+                                          'longTerms':
+                                              FieldValue.increment(-(1)),
+                                        };
+                                        await currentUserReference!
+                                            .update(usersUpdateData2);
+                                      }
+
+                                      if (widget.projectRef!.completed ==
+                                          true) {
+                                        final usersUpdateData3 = {
+                                          'completedProjects':
+                                              FieldValue.increment(-(1)),
+                                        };
+                                        await currentUserReference!
+                                            .update(usersUpdateData3);
+                                      }
+                                      if (Navigator.of(context).canPop()) {
+                                        context.pop();
+                                      }
+                                      context.pushNamed('myVisions');
+                                    } else {
+                                      return;
+                                    }
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    '3uigqoh0' /* Delete Project */,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width: 270.0,
+                                    height: 50.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(context).error,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmallFamily,
+                                          color: Colors.white,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily),
+                                        ),
+                                    borderSide: BorderSide(
+                                      color: FlutterFlowTheme.of(context).error,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(50.0),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

@@ -166,7 +166,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               requireAuth: true,
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'myVisions')
-                  : MyVisionsWidget(),
+                  : MyVisionsWidget(
+                      index: params.getParam('index', ParamType.int),
+                    ),
             ),
             FFRoute(
               name: 'myProfile',
@@ -177,12 +179,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : MyProfileWidget(),
             ),
             FFRoute(
-              name: 'Main_teamPage',
-              path: 'mainTeamPage',
+              name: 'manageCommunity',
+              path: 'manageCommunity',
               requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Main_teamPage')
-                  : MainTeamPageWidget(),
+              builder: (context, params) => NavBarPage(
+                initialPage: '',
+                page: ManageCommunityWidget(),
+              ),
             ),
             FFRoute(
               name: 'searchMembers',
@@ -342,36 +345,101 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => Test3Widget(),
             ),
             FFRoute(
-              name: 'JoinCommunity',
+              name: 'joinCommunity',
               path: 'joinCommunity',
               requireAuth: true,
-              builder: (context, params) => JoinCommunityWidget(),
+              builder: (context, params) => NavBarPage(
+                initialPage: '',
+                page: JoinCommunityWidget(),
+              ),
             ),
             FFRoute(
               name: 'createCommunity',
               path: 'createCommunity',
               requireAuth: true,
-              builder: (context, params) => CreateCommunityWidget(),
+              builder: (context, params) => NavBarPage(
+                initialPage: '',
+                page: CreateCommunityWidget(),
+              ),
             ),
             FFRoute(
-              name: 'ManageCommunity',
-              path: 'manageCommunity',
-              builder: (context, params) => ManageCommunityWidget(),
-            ),
-            FFRoute(
-              name: 'CommunityPage',
-              path: 'community',
+              name: 'communityPage',
+              path: 'communityPage',
               requireAuth: true,
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'CommunityPage')
-                  : CommunityPageWidget(),
+                  ? NavBarPage(initialPage: 'communityPage')
+                  : NavBarPage(
+                      initialPage: 'communityPage',
+                      page: CommunityPageWidget(),
+                    ),
             ),
             FFRoute(
-              name: 'NewCommunity',
-              path: 'newCommunity',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'NewCommunity')
-                  : NewCommunityWidget(),
+              name: 'editTask',
+              path: 'editTask',
+              requireAuth: true,
+              asyncParams: {
+                'projectRef': getDoc(['projects'], ProjectsRecord.serializer),
+                'taskRef': getDoc(['allTasks'], AllTasksRecord.serializer),
+              },
+              builder: (context, params) => EditTaskWidget(
+                projectRef: params.getParam('projectRef', ParamType.Document),
+                taskRef: params.getParam('taskRef', ParamType.Document),
+              ),
+            ),
+            FFRoute(
+              name: 'finalizeCommunity',
+              path: 'finalizeCommunity',
+              requireAuth: true,
+              builder: (context, params) => FinalizeCommunityWidget(),
+            ),
+            FFRoute(
+              name: 'Main_teamPageCopy',
+              path: 'mainTeamPageCopy',
+              requireAuth: true,
+              builder: (context, params) => MainTeamPageCopyWidget(),
+            ),
+            FFRoute(
+              name: 'viewTask',
+              path: 'viewTask',
+              requireAuth: true,
+              asyncParams: {
+                'projectRef': getDoc(['projects'], ProjectsRecord.serializer),
+                'taskRef': getDoc(['allTasks'], AllTasksRecord.serializer),
+              },
+              builder: (context, params) => ViewTaskWidget(
+                projectRef: params.getParam('projectRef', ParamType.Document),
+                taskRef: params.getParam('taskRef', ParamType.Document),
+              ),
+            ),
+            FFRoute(
+              name: 'myVisionsCopy',
+              path: 'myVisionsTest',
+              requireAuth: true,
+              builder: (context, params) => MyVisionsCopyWidget(
+                index: params.getParam('index', ParamType.int),
+              ),
+            ),
+            FFRoute(
+              name: 'joinCommunityStepTwo',
+              path: 'joinCommunityStepTwo',
+              requireAuth: true,
+              builder: (context, params) => NavBarPage(
+                initialPage: '',
+                page: JoinCommunityStepTwoWidget(
+                  inviteCode: params.getParam('inviteCode', ParamType.String),
+                ),
+              ),
+            ),
+            FFRoute(
+              name: 'viewUser',
+              path: 'viewUser',
+              requireAuth: true,
+              asyncParams: {
+                'userRef': getDoc(['users'], UsersRecord.serializer),
+              },
+              builder: (context, params) => ViewUserWidget(
+                userRef: params.getParam('userRef', ParamType.Document),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
@@ -556,10 +624,13 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: FlutterFlowTheme.of(context).primaryBackground,
-                  child: Image.asset(
-                    'assets/images/Vision_Board-2.png',
-                    fit: BoxFit.contain,
+                  color: FlutterFlowTheme.of(context).primary,
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/envision-6.png',
+                      width: MediaQuery.of(context).size.width * 1.0,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 )
               : page;
