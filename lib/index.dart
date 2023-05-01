@@ -42,9 +42,9 @@ export '/pages/original_copies/new_create_task/new_create_task_widget.dart'
 export '/pages/original_copies/main_projects_web_copy/main_projects_web_copy_widget.dart'
     show MainProjectsWebCopyWidget;
 export '/pages/notused/test/test_widget.dart' show TestWidget;
-export '/pages/hayden_pages/create_profile_copy/create_profile_copy_widget.dart'
+export '/pages/notused/hayden_pages/create_profile_copy/create_profile_copy_widget.dart'
     show CreateProfileCopyWidget;
-export '/pages/hayden_pages/edit_profile_copy/edit_profile_copy_widget.dart'
+export '/pages/notused/hayden_pages/edit_profile_copy/edit_profile_copy_widget.dart'
     show EditProfileCopyWidget;
 export '/pages/notused/test2/test2_widget.dart' show Test2Widget;
 export '/pages/original_copies/project_details_page_copy/project_details_page_copy_widget.dart'
@@ -55,7 +55,7 @@ export '/pages/original_copies/vision_board_page1a_copy/vision_board_page1a_copy
     show VisionBoardPage1aCopyWidget;
 export '/pages/a_pages/task_details_copy/task_details_copy_widget.dart'
     show TaskDetailsCopyWidget;
-export '/pages/hayden_pages/create_project_copy2/create_project_copy2_widget.dart'
+export '/pages/notused/hayden_pages/create_project_copy2/create_project_copy2_widget.dart'
     show CreateProjectCopy2Widget;
 export '/pages/test3/test3_widget.dart' show Test3Widget;
 export '/pages/community_pages/join_community/join_community_widget.dart'
@@ -75,3 +75,5 @@ export '/pages/a_pages/my_visions_copy/my_visions_copy_widget.dart'
 export '/pages/community_pages/join_community_step_two/join_community_step_two_widget.dart'
     show JoinCommunityStepTwoWidget;
 export '/pages/a_pages/view_user/view_user_widget.dart' show ViewUserWidget;
+export '/pages/a_pages/desktop_only/desktop_only_widget.dart'
+    show DesktopOnlyWidget;

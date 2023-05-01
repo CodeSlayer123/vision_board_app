@@ -198,6 +198,10 @@ class _MyVisionsCopyWidgetState extends State<MyVisionsCopyWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 12.0, 0.0),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       scaffoldKey.currentState!.openDrawer();
                                     },
@@ -412,6 +416,10 @@ class _MyVisionsCopyWidgetState extends State<MyVisionsCopyWidget>
                                               BorderRadius.circular(12.0),
                                         ),
                                         child: InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
                                           onTap: () async {
                                             if (MediaQuery.of(context)
                                                     .size
@@ -765,40 +773,44 @@ class _MyVisionsCopyWidgetState extends State<MyVisionsCopyWidget>
                         2),
                     child: Column(
                       children: [
-                        TabBar(
-                          isScrollable: true,
-                          labelColor: FlutterFlowTheme.of(context).primaryText,
-                          unselectedLabelColor:
-                              FlutterFlowTheme.of(context).secondaryText,
-                          labelStyle: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.bold,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
+                        Align(
+                          alignment: Alignment(0.0, 0),
+                          child: TabBar(
+                            isScrollable: true,
+                            labelColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            unselectedLabelColor:
+                                FlutterFlowTheme.of(context).secondaryText,
+                            labelStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
+                            indicatorColor: Color(0xFF897DEE),
+                            tabs: [
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  'dqovebop' /* Short Term Visions */,
+                                ),
                               ),
-                          indicatorColor: Color(0xFF897DEE),
-                          tabs: [
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                'dqovebop' /* Short Term Visions */,
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '3feut3dg' /* Long Term Visions */,
+                                ),
                               ),
-                            ),
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                '3feut3dg' /* Long Term Visions */,
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '2gyyf8be' /* Complete */,
+                                ),
                               ),
-                            ),
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                '2gyyf8be' /* Complete */,
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Expanded(
                           child: TabBarView(
@@ -955,6 +967,11 @@ class _MyVisionsCopyWidgetState extends State<MyVisionsCopyWidget>
                                                 staggeredViewProjectsRecordList[
                                                     staggeredViewIndex];
                                             return InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
                                               onTap: () async {
                                                 context.pushNamed(
                                                   'projectDetailsPage2a',
@@ -1081,6 +1098,11 @@ class _MyVisionsCopyWidgetState extends State<MyVisionsCopyWidget>
                                                 staggeredViewProjectsRecordList[
                                                     staggeredViewIndex];
                                             return InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
                                               onTap: () async {
                                                 context.pushNamed(
                                                   'projectDetailsPage2a',

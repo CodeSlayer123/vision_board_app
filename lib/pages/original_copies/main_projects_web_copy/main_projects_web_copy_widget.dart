@@ -202,6 +202,10 @@ class _MainProjectsWebCopyWidgetState extends State<MainProjectsWebCopyWidget>
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 12.0, 0.0),
                               child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
                                 onTap: () async {
                                   scaffoldKey.currentState!.openDrawer();
                                 },
@@ -398,6 +402,10 @@ class _MainProjectsWebCopyWidgetState extends State<MainProjectsWebCopyWidget>
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       onTap: () async {
                                         if (MediaQuery.of(context).size.width >=
                                             768.0) {
@@ -763,6 +771,10 @@ class _MainProjectsWebCopyWidgetState extends State<MainProjectsWebCopyWidget>
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       onTap: () async {
                                         context.pushNamed(
                                           'projectDetailsPage',

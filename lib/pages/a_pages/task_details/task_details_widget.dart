@@ -248,8 +248,8 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: 0.7,
-          end: 1.0,
+          begin: Offset(0.7, 0.7),
+          end: Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -274,8 +274,8 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: 0.7,
-          end: 1.0,
+          begin: Offset(0.7, 0.7),
+          end: Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -393,6 +393,10 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget>
                                   }
                                   final rowProjectsRecord = snapshot.data!;
                                   return InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed(
                                         'projectDetailsPage',

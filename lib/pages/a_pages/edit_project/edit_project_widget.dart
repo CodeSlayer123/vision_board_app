@@ -11,6 +11,7 @@ import '/flutter_flow/upload_data.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'edit_project_model.dart';
@@ -38,6 +39,13 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => EditProjectModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      setState(() {
+        _model.term = widget.projectRef!.term;
+      });
+    });
 
     _model.taskNameController ??= TextEditingController(
         text: valueOrDefault<String>(
@@ -162,7 +170,7 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                                       decoration: InputDecoration(
                                         labelText:
                                             FFLocalizations.of(context).getText(
-                                          'wwzsnwbn' /* Project Name */,
+                                          'wwzsnwbn' /* Vision  Name */,
                                         ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .headlineSmall
@@ -284,7 +292,7 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                       textAlign: TextAlign.start,
-                                      maxLines: 15,
+                                      maxLines: 10,
                                       keyboardType: TextInputType.multiline,
                                       validator: _model
                                           .descriptionControllerValidator
@@ -305,8 +313,33 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                                           'bolc4e4p' /* Long Term */,
                                         ))
                                       ],
-                                      onChanged: (val) => setState(() =>
-                                          _model.choiceChipsValue = val?.first),
+                                      onChanged: (val) async {
+                                        setState(() => _model.choiceChipsValue =
+                                            val?.first);
+                                        if (_model.choiceChipsValue !=
+                                            widget.projectRef!.term) {
+                                          if (_model.choiceChipsValue ==
+                                              'Short Term') {
+                                            final usersUpdateData1 = {
+                                              'shortTerms':
+                                                  FieldValue.increment(1),
+                                              'longTerms':
+                                                  FieldValue.increment(-(1)),
+                                            };
+                                            await currentUserReference!
+                                                .update(usersUpdateData1);
+                                          } else {
+                                            final usersUpdateData2 = {
+                                              'shortTerms':
+                                                  FieldValue.increment(-(1)),
+                                              'longTerms':
+                                                  FieldValue.increment(1),
+                                            };
+                                            await currentUserReference!
+                                                .update(usersUpdateData2);
+                                          }
+                                        }
+                                      },
                                       selectedChipStyle: ChipStyle(
                                         backgroundColor: Color(0xFFFA8072),
                                         textStyle: FlutterFlowTheme.of(context)
@@ -403,6 +436,8 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                                                                 width: m
                                                                     .dimensions
                                                                     ?.width,
+                                                                blurHash:
+                                                                    m.blurHash,
                                                               ))
                                                       .toList();
 
@@ -582,7 +617,9 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                                                 fontFamily:
                                                     FlutterFlowTheme.of(context)
                                                         .titleMediumFamily,
-                                                color: Color(0x00000000),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
                                                 useGoogleFonts: GoogleFonts
                                                         .asMap()
                                                     .containsKey(
@@ -594,7 +631,7 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                                         duration: Duration(milliseconds: 4000),
                                         backgroundColor:
                                             FlutterFlowTheme.of(context)
-                                                .alternate,
+                                                .secondary,
                                       ),
                                     );
                                     if (Navigator.of(context).canPop()) {
@@ -623,8 +660,7 @@ class _EditProjectWidgetState extends State<EditProjectWidget> {
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color:
-                                        FlutterFlowTheme.of(context).secondary,
+                                    color: Color(0xFFFA8072),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(

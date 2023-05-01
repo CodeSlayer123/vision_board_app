@@ -45,8 +45,8 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 300.ms,
-          begin: 0.9,
-          end: 1.0,
+          begin: Offset(0.9, 0.9),
+          end: Offset(1.0, 1.0),
         ),
         FadeEffect(
           curve: Curves.easeInOut,
@@ -174,6 +174,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 1.0, 0.0, 12.0),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pop();
                                     },
@@ -441,6 +445,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 8.0, 0.0),
                                           child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
                                             onTap: () async {
                                               final _datePicked1Date =
                                                   await showDatePicker(
@@ -527,6 +535,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                               'containerOnPageLoadAnimation']!),
                                         ),
                                       InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
                                         onTap: () async {
                                           final _datePicked2Date =
                                               await showDatePicker(
@@ -735,7 +747,9 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                             ),
                                       ),
                                       duration: Duration(milliseconds: 4000),
-                                      backgroundColor: Color(0xFFFA8072),
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .secondary,
                                     ),
                                   );
                                   if (Navigator.of(context).canPop()) {

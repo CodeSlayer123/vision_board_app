@@ -23,6 +23,9 @@ class EditProfileModel extends FlutterFlowModel {
   // State field(s) for myBio widget.
   TextEditingController? myBioController;
   String? Function(BuildContext, String?)? myBioControllerValidator;
+  // State field(s) for phoneNumber widget.
+  TextEditingController? phoneNumberController;
+  String? Function(BuildContext, String?)? phoneNumberControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -32,6 +35,7 @@ class EditProfileModel extends FlutterFlowModel {
     yourNameController?.dispose();
     titleRoleController?.dispose();
     myBioController?.dispose();
+    phoneNumberController?.dispose();
   }
 
   /// Additional helper methods are added here.

@@ -495,47 +495,51 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                           initialIndex: 0,
                           child: Column(
                             children: [
-                              TabBar(
-                                isScrollable: true,
-                                labelColor:
-                                    FlutterFlowTheme.of(context).primaryText,
-                                unselectedLabelColor:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                labelStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.bold,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily),
+                              Align(
+                                alignment: Alignment(0.0, 0),
+                                child: TabBar(
+                                  isScrollable: true,
+                                  labelColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  unselectedLabelColor:
+                                      FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                  labelStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodyMediumFamily,
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.bold,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily),
+                                      ),
+                                  indicatorColor: Color(0xFF897DEE),
+                                  tabs: [
+                                    Tab(
+                                      text: FFLocalizations.of(context).getText(
+                                        '0czvp5si' /* My Visions */,
+                                      ),
                                     ),
-                                indicatorColor: Color(0xFF897DEE),
-                                tabs: [
-                                  Tab(
-                                    text: FFLocalizations.of(context).getText(
-                                      '0czvp5si' /* My Visions */,
+                                    Tab(
+                                      text: FFLocalizations.of(context).getText(
+                                        '7pt4e1ub' /* Not Started */,
+                                      ),
                                     ),
-                                  ),
-                                  Tab(
-                                    text: FFLocalizations.of(context).getText(
-                                      '7pt4e1ub' /* Not Started */,
+                                    Tab(
+                                      text: FFLocalizations.of(context).getText(
+                                        'hnk7jipz' /* In Progress */,
+                                      ),
                                     ),
-                                  ),
-                                  Tab(
-                                    text: FFLocalizations.of(context).getText(
-                                      'hnk7jipz' /* In Progress */,
+                                    Tab(
+                                      text: FFLocalizations.of(context).getText(
+                                        '3p9m1j93' /* Complete */,
+                                      ),
                                     ),
-                                  ),
-                                  Tab(
-                                    text: FFLocalizations.of(context).getText(
-                                      '3p9m1j93' /* Complete */,
-                                    ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                               Expanded(
                                 child: TabBarView(
@@ -683,6 +687,14 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 4.0, 16.0, 8.0),
                                                 child: InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
                                                   onTap: () async {
                                                     context.pushNamed(
                                                       'taskDetails',
@@ -1078,6 +1090,14 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 8.0),
                                                 child: InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
                                                   onTap: () async {
                                                     context.pushNamed(
                                                       'taskDetails',
@@ -1153,6 +1173,15 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                                 ),
                                                               ),
                                                               InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
                                                                 onTap:
                                                                     () async {
                                                                   final allTasksUpdateData =
@@ -1404,6 +1433,14 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                       .fromSTEB(
                                                           16.0, 4.0, 16.0, 8.0),
                                                   child: InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
                                                     onTap: () async {
                                                       context.pushNamed(
                                                         'taskDetails',
@@ -1738,6 +1775,14 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                       .fromSTEB(16.0, 0.0, 16.0,
                                                           12.0),
                                                   child: InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
                                                     onTap: () async {
                                                       context.pushNamed(
                                                         'taskDetails',
@@ -2199,6 +2244,18 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                                           8.0),
                                                                   child:
                                                                       InkWell(
+                                                                    splashColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                    focusColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                    hoverColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                    highlightColor:
+                                                                        Colors
+                                                                            .transparent,
                                                                     onTap:
                                                                         () async {
                                                                       context
@@ -2521,6 +2578,14 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                                     0.0,
                                                                     8.0),
                                                         child: InkWell(
+                                                          splashColor: Colors
+                                                              .transparent,
+                                                          focusColor: Colors
+                                                              .transparent,
+                                                          hoverColor: Colors
+                                                              .transparent,
+                                                          highlightColor: Colors
+                                                              .transparent,
                                                           onTap: () async {
                                                             await showModalBottomSheet(
                                                               isScrollControlled:
@@ -2642,6 +2707,14 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                                             ),
                                                                           ),
                                                                           InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
                                                                             onTap:
                                                                                 () async {
                                                                               final allTasksUpdateData = createAllTasksRecordData(
@@ -2912,6 +2985,14 @@ class _MainTrackerCopyWidgetState extends State<MainTrackerCopyWidget>
                                                                     0.0,
                                                                     8.0),
                                                         child: InkWell(
+                                                          splashColor: Colors
+                                                              .transparent,
+                                                          focusColor: Colors
+                                                              .transparent,
+                                                          hoverColor: Colors
+                                                              .transparent,
+                                                          highlightColor: Colors
+                                                              .transparent,
                                                           onTap: () async {
                                                             await showModalBottomSheet(
                                                               isScrollControlled:

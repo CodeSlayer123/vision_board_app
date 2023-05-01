@@ -133,7 +133,7 @@ class _CreateProjectWidgetState extends State<CreateProjectWidget> {
                                         decoration: InputDecoration(
                                           labelText: FFLocalizations.of(context)
                                               .getText(
-                                            '9duf9kbf' /* Project Name */,
+                                            '9duf9kbf' /* Vision Name */,
                                           ),
                                           labelStyle: FlutterFlowTheme.of(
                                                   context)
@@ -263,7 +263,7 @@ class _CreateProjectWidgetState extends State<CreateProjectWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                         textAlign: TextAlign.start,
-                                        maxLines: 15,
+                                        maxLines: 10,
                                         keyboardType: TextInputType.multiline,
                                         validator: _model
                                             .descriptionControllerValidator
@@ -390,6 +390,8 @@ class _CreateProjectWidgetState extends State<CreateProjectWidget> {
                                                               width: m
                                                                   .dimensions
                                                                   ?.width,
+                                                              blurHash:
+                                                                  m.blurHash,
                                                             ))
                                                         .toList();
 
@@ -618,17 +620,7 @@ class _CreateProjectWidgetState extends State<CreateProjectWidget> {
                                         .update(usersUpdateData2);
                                   }
 
-                                  context.pushNamed(
-                                    'myVisions',
-                                    queryParams: {
-                                      'index': serializeParam(
-                                        _model.choiceChipsValue == 'Long Term'
-                                            ? 1
-                                            : 0,
-                                        ParamType.int,
-                                      ),
-                                    }.withoutNulls,
-                                  );
+                                  context.pushNamed('myVisions');
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   'gql7sgl9' /* Create Vision */,

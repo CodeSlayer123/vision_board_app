@@ -1,7 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -219,27 +218,6 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                         ),
                                       ),
                                     ),
-                                    if (responsiveVisibility(
-                                      context: context,
-                                      tablet: false,
-                                      tabletLandscape: false,
-                                      desktop: false,
-                                    ))
-                                      FlutterFlowIconButton(
-                                        borderColor: Colors.transparent,
-                                        borderRadius: 30.0,
-                                        borderWidth: 1.0,
-                                        buttonSize: 60.0,
-                                        icon: Icon(
-                                          Icons.close_rounded,
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          size: 30.0,
-                                        ),
-                                        onPressed: () async {
-                                          context.pop();
-                                        },
-                                      ),
                                   ],
                                 ),
                               ),
@@ -253,6 +231,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   if (!(Theme.of(context).brightness ==
                                       Brightness.dark))
                                     InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       onTap: () async {
                                         setDarkModeSetting(
                                             context, ThemeMode.dark);
@@ -386,6 +368,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   if (Theme.of(context).brightness ==
                                       Brightness.dark)
                                     InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       onTap: () async {
                                         setDarkModeSetting(
                                             context, ThemeMode.light);
@@ -548,6 +534,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed('forgotPassword');
                                     },
@@ -611,6 +601,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 12.0, 20.0, 0.0),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed('editProfile');
                                     },
@@ -674,6 +668,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 12.0, 20.0, 0.0),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed('joinCommunity');
                                     },
@@ -744,6 +742,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                             20.0, 12.0, 20.0, 0.0),
                                         child: AuthUserStreamWidget(
                                           builder: (context) => InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context
                                                   .pushNamed('manageCommunity');
@@ -829,6 +831,11 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                   20.0, 12.0, 20.0, 0.0),
                                           child: AuthUserStreamWidget(
                                             builder: (context) => InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
                                               onTap: () async {
                                                 context.pushNamed(
                                                     'createCommunity');
@@ -934,8 +941,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondary,
+                                          color: Color(0xFFFA8072),
                                           textStyle: FlutterFlowTheme.of(
                                                   context)
                                               .bodySmall
@@ -943,7 +949,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                 fontFamily: 'Lexend Deca',
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryText,
+                                                        .primaryBtnText,
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.normal,
                                                 useGoogleFonts: GoogleFonts
@@ -996,7 +1002,6 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                             ) ??
                                             false;
                                     if (confirmDialogResponse) {
-                                      await currentUserReference!.delete();
                                       await authManager.deleteUser(context);
                                     } else {
                                       return;

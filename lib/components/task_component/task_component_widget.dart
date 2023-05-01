@@ -84,6 +84,10 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget>
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
       child: InkWell(
+        splashColor: Colors.transparent,
+        focusColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        highlightColor: Colors.transparent,
         onTap: () async {
           if (MediaQuery.of(context).size.width >= 728.0) {
             await showModalBottomSheet(

@@ -1,6 +1,6 @@
 {
-    "name": "VisionBoard",
-    "short_name": "VisionBoard",
+    "name": "EnvisionBoard",
+    "short_name": "EnvisionBoard",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

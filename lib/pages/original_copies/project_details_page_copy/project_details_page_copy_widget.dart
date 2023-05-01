@@ -362,6 +362,10 @@ class _ProjectDetailsPageCopyWidgetState
                       padding: EdgeInsetsDirectional.fromSTEB(
                           16.0, 12.0, 16.0, 12.0),
                       child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onTap: () async {
                           context.pushNamed(
                             'teamMembers',
@@ -624,30 +628,36 @@ class _ProjectDetailsPageCopyWidgetState
                     initialIndex: 0,
                     child: Column(
                       children: [
-                        TabBar(
-                          isScrollable: true,
-                          labelColor: FlutterFlowTheme.of(context).primaryText,
-                          unselectedLabelColor:
-                              FlutterFlowTheme.of(context).secondaryText,
-                          labelStyle: FlutterFlowTheme.of(context).titleMedium,
-                          indicatorColor: FlutterFlowTheme.of(context).primary,
-                          tabs: [
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                'cts1t6kx' /* In Progress */,
+                        Align(
+                          alignment: Alignment(0.0, 0),
+                          child: TabBar(
+                            isScrollable: true,
+                            labelColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            unselectedLabelColor:
+                                FlutterFlowTheme.of(context).secondaryText,
+                            labelStyle:
+                                FlutterFlowTheme.of(context).titleMedium,
+                            indicatorColor:
+                                FlutterFlowTheme.of(context).primary,
+                            tabs: [
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  'cts1t6kx' /* In Progress */,
+                                ),
                               ),
-                            ),
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                'x25pvucu' /* Completed */,
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  'x25pvucu' /* Completed */,
+                                ),
                               ),
-                            ),
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                '115z780p' /* Activity */,
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '115z780p' /* Activity */,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Expanded(
                           child: TabBarView(
@@ -716,6 +726,10 @@ class _ProjectDetailsPageCopyWidgetState
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 4.0, 16.0, 8.0),
                                           child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context.pushNamed(
                                                 'taskDetails',
@@ -1115,6 +1129,10 @@ class _ProjectDetailsPageCopyWidgetState
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 12.0),
                                           child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context.pushNamed(
                                                 'taskDetails',
@@ -1499,6 +1517,11 @@ class _ProjectDetailsPageCopyWidgetState
                                                 listViewActivityRecordList[
                                                     listViewIndex];
                                             return InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
                                               onTap: () async {
                                                 final activityUpdateData =
                                                     createActivityRecordData(

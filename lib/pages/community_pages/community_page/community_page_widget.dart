@@ -93,6 +93,10 @@ class _CommunityPageWidgetState extends State<CommunityPageWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 12.0, 0.0),
                               child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
                                 onTap: () async {
                                   scaffoldKey.currentState!.openDrawer();
                                 },
@@ -162,70 +166,99 @@ class _CommunityPageWidgetState extends State<CommunityPageWidget> {
                                                       .bodyMediumFamily),
                                         ),
                                   ),
-                                if ((currentUserDocument?.communities
-                                                ?.toList() ??
-                                            [])
-                                        .length >
-                                    0)
-                                  InkWell(
-                                    onTap: () async {
-                                      if ((_model.community != null) == true) {
-                                        final usersUpdateData1 = {
-                                          'Communities': FieldValue.arrayRemove(
-                                              [_model.community!.reference]),
-                                        };
-                                        await currentUserReference!
-                                            .update(usersUpdateData1);
+                                if ((_model.community != null
+                                        ? _model.community!.orgAdmin
+                                        : communityPageOrganizationsRecord
+                                            .orgAdmin) !=
+                                    currentUserReference)
+                                  Container(
+                                    width:
+                                        MediaQuery.of(context).size.width * 1.0,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                    ),
+                                    child: Visibility(
+                                      visible: (currentUserDocument?.communities
+                                                      ?.toList() ??
+                                                  [])
+                                              .length >
+                                          0,
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          if ((_model.community != null) ==
+                                              true) {
+                                            final usersUpdateData1 = {
+                                              'Communities':
+                                                  FieldValue.arrayRemove([
+                                                _model.community!.reference
+                                              ]),
+                                            };
+                                            await currentUserReference!
+                                                .update(usersUpdateData1);
 
-                                        final organizationsUpdateData1 = {
-                                          'OrgMembers': FieldValue.arrayRemove(
-                                              [currentUserReference]),
-                                        };
-                                        await _model.community!.reference
-                                            .update(organizationsUpdateData1);
-                                      } else {
-                                        final usersUpdateData2 = {
-                                          'Communities':
-                                              FieldValue.arrayRemove([
-                                            communityPageOrganizationsRecord
+                                            final organizationsUpdateData1 = {
+                                              'OrgMembers':
+                                                  FieldValue.arrayRemove(
+                                                      [currentUserReference]),
+                                            };
+                                            await _model.community!.reference
+                                                .update(
+                                                    organizationsUpdateData1);
+                                          } else {
+                                            final usersUpdateData2 = {
+                                              'Communities':
+                                                  FieldValue.arrayRemove([
+                                                communityPageOrganizationsRecord
+                                                    .reference
+                                              ]),
+                                            };
+                                            await currentUserReference!
+                                                .update(usersUpdateData2);
+
+                                            final organizationsUpdateData2 = {
+                                              'OrgMembers':
+                                                  FieldValue.arrayRemove(
+                                                      [currentUserReference]),
+                                            };
+                                            await communityPageOrganizationsRecord
                                                 .reference
-                                          ]),
-                                        };
-                                        await currentUserReference!
-                                            .update(usersUpdateData2);
+                                                .update(
+                                                    organizationsUpdateData2);
+                                          }
 
-                                        final organizationsUpdateData2 = {
-                                          'OrgMembers': FieldValue.arrayRemove(
-                                              [currentUserReference]),
-                                        };
-                                        await communityPageOrganizationsRecord
-                                            .reference
-                                            .update(organizationsUpdateData2);
-                                      }
-
-                                      if (Navigator.of(context).canPop()) {
-                                        context.pop();
-                                      }
-                                      context.pushNamed('communityPage');
-                                    },
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'zpjgyrly' /* Leave Community */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            fontWeight: FontWeight.w600,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily),
+                                          if (Navigator.of(context).canPop()) {
+                                            context.pop();
+                                          }
+                                          context.pushNamed('communityPage');
+                                        },
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            '5dzerwbg' /* Leave Community */,
                                           ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
+                                                fontWeight: FontWeight.w600,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
+                                              ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                               ],
@@ -346,6 +379,10 @@ class _CommunityPageWidgetState extends State<CommunityPageWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 5.0, 0.0),
                                     child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       onTap: () async {
                                         setState(() {
                                           _model.community =
@@ -381,37 +418,41 @@ class _CommunityPageWidgetState extends State<CommunityPageWidget> {
                           initialIndex: 0,
                           child: Column(
                             children: [
-                              TabBar(
-                                isScrollable: true,
-                                labelColor:
-                                    FlutterFlowTheme.of(context).primaryText,
-                                unselectedLabelColor:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                labelStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.bold,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily),
+                              Align(
+                                alignment: Alignment(0.0, 0),
+                                child: TabBar(
+                                  isScrollable: true,
+                                  labelColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  unselectedLabelColor:
+                                      FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                  labelStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodyMediumFamily,
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.bold,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily),
+                                      ),
+                                  indicatorColor: Color(0xFF897DEE),
+                                  tabs: [
+                                    Tab(
+                                      text: FFLocalizations.of(context).getText(
+                                        's4wbv7sv' /* Short Term  */,
+                                      ),
                                     ),
-                                indicatorColor: Color(0xFF897DEE),
-                                tabs: [
-                                  Tab(
-                                    text: FFLocalizations.of(context).getText(
-                                      's4wbv7sv' /* Short Term  */,
+                                    Tab(
+                                      text: FFLocalizations.of(context).getText(
+                                        'xrra6vyy' /* Long Term  */,
+                                      ),
                                     ),
-                                  ),
-                                  Tab(
-                                    text: FFLocalizations.of(context).getText(
-                                      'xrra6vyy' /* Long Term  */,
-                                    ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                               Expanded(
                                 child: TabBarView(
@@ -486,6 +527,14 @@ class _CommunityPageWidgetState extends State<CommunityPageWidget> {
                                                         staggeredViewProjectsRecordList[
                                                             staggeredViewIndex];
                                                     return InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
                                                       onTap: () async {
                                                         context.pushNamed(
                                                           'projectDetailsPage2a',
@@ -529,6 +578,14 @@ class _CommunityPageWidgetState extends State<CommunityPageWidget> {
                                                       .fromSTEB(20.0, 12.0,
                                                           20.0, 0.0),
                                                   child: InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
                                                     onTap: () async {
                                                       context.pushNamed(
                                                           'joinCommunity');
@@ -678,6 +735,14 @@ class _CommunityPageWidgetState extends State<CommunityPageWidget> {
                                                       staggeredViewProjectsRecordList[
                                                           staggeredViewIndex];
                                                   return InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
                                                     onTap: () async {
                                                       context.pushNamed(
                                                         'projectDetailsPage2a',
@@ -719,6 +784,14 @@ class _CommunityPageWidgetState extends State<CommunityPageWidget> {
                                                       .fromSTEB(20.0, 12.0,
                                                           20.0, 0.0),
                                                   child: InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
                                                     onTap: () async {
                                                       context.pushNamed(
                                                           'joinCommunity');

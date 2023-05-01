@@ -119,6 +119,10 @@ class _EditProfileCopyWidgetState extends State<EditProfileCopyWidget> {
                               2.0, 2.0, 2.0, 2.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
                               onTap: () async {
                                 final selectedMedia =
                                     await selectMediaWithSourceBottomSheet(
@@ -141,6 +145,7 @@ class _EditProfileCopyWidgetState extends State<EditProfileCopyWidget> {
                                               bytes: m.bytes,
                                               height: m.dimensions?.height,
                                               width: m.dimensions?.width,
+                                              blurHash: m.blurHash,
                                             ))
                                         .toList();
 

@@ -249,6 +249,10 @@ class _ModalTaskCreate1WidgetState extends State<ModalTaskCreate1Widget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 12.0),
                                 child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
                                   onTap: () async {
                                     await showModalBottomSheet(
                                       isScrollControlled: true,

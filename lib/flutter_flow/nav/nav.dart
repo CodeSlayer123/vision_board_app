@@ -166,9 +166,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               requireAuth: true,
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'myVisions')
-                  : MyVisionsWidget(
-                      index: params.getParam('index', ParamType.int),
-                    ),
+                  : MyVisionsWidget(),
             ),
             FFRoute(
               name: 'myProfile',
@@ -440,6 +438,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ViewUserWidget(
                 userRef: params.getParam('userRef', ParamType.Document),
               ),
+            ),
+            FFRoute(
+              name: 'desktopOnly',
+              path: 'desktopOnly',
+              builder: (context, params) => DesktopOnlyWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

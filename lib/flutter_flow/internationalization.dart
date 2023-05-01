@@ -193,6 +193,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'உங்கள் கணக்கை துவங்குங்கள்',
       'ur': 'اکاؤنٹ بنائیں',
     },
+    'n359t5yw': {
+      'en': 'Desktop Mode Coming Soon!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
     'tazfclws': {
       'en': 'Field is required',
       'hi': '',
@@ -311,20 +317,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்..',
       'ur': 'یہاں تفصیل درج کریں..',
     },
-    'v8ktyj0f': {
-      'en': '(optional)',
+    'ytvni964': {
+      'en': '',
       'hi': '',
       'ta': '',
       'ur': '',
     },
-    '355g1zkk': {
+    'v6uu3m06': {
       'en': 'Enter phone number here..',
       'hi': 'यहां विवरण दर्ज करें ..',
       'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்..',
       'ur': 'یہاں تفصیل درج کریں..',
     },
-    'r1fjugu6': {
-      'en': 'Phone number will be visible to users within your community',
+    'siw5u7j8': {
+      'en':
+          '(Optional) Phone number will be visible to users within your community',
       'hi': '',
       'ta': '',
       'ur': '',
@@ -932,12 +939,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '5mru78lw': {
-      'en': 'Create Project',
-      'hi': '',
-      'ta': '',
-      'ur': '',
-    },
     '1wa31x2v': {
       'en': 'Short Term Visions',
       'hi': 'मेरा काम',
@@ -970,6 +971,48 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6vyvn2vc': {
       'en': 'No visions have been completed yet.\nKeep believing!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '2v6n2tlx': {
+      'en': 'Short Term Visions',
+      'hi': 'मेरा काम',
+      'ta': 'எனது பணிகள்',
+      'ur': 'میرے کام',
+    },
+    '8si66eut': {
+      'en': 'There are no current short term visions!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '9z27ynkd': {
+      'en': 'Long Term Visions',
+      'hi': 'चालू',
+      'ta': 'செயல்பாட்டில் உள்ளது',
+      'ur': 'کام جاری ہے',
+    },
+    'xjmguoqi': {
+      'en': 'There are no current long term visions!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '7lftz9ag': {
+      'en': 'Complete',
+      'hi': 'पूरा',
+      'ta': 'முழுமை',
+      'ur': 'مکمل',
+    },
+    'ln4ti5g5': {
+      'en': 'No visions have been completed yet.\nKeep believing!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'q33jb0u9': {
+      'en': 'Desktop Mode Coming Soon!',
       'hi': '',
       'ta': '',
       'ur': '',
@@ -1137,7 +1180,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'پروجیکٹ بنائیں',
     },
     '9duf9kbf': {
-      'en': 'Project Name',
+      'en': 'Vision Name',
       'hi': 'परियोजना का नाम',
       'ta': 'திட்டத்தின் பெயர்',
       'ur': 'پراجیکٹ کا نام',
@@ -1237,6 +1280,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'br3jvobf': {
       'en': 'Your bio',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    's1robjfn': {
+      'en': 'Phone Number',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'r21rq2eb': {
+      'en': 'Enter phone number here..',
+      'hi': 'यहां विवरण दर्ज करें ..',
+      'ta': 'விளக்கத்தை இங்கே உள்ளிடவும்..',
+      'ur': 'یہاں تفصیل درج کریں..',
+    },
+    'lni4xqev': {
+      'en':
+          '(Optional) Phone number will be visible to users within your community',
       'hi': '',
       'ta': '',
       'ur': '',
@@ -1392,7 +1454,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'پروجیکٹ بنائیں',
     },
     'wwzsnwbn': {
-      'en': 'Project Name',
+      'en': 'Vision  Name',
       'hi': 'परियोजना का नाम',
       'ta': 'திட்டத்தின் பெயர்',
       'ur': 'پراجیکٹ کا نام',
@@ -2219,6 +2281,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // projectDetailsPage2a
   {
+    'ku70mr3f': {
+      'en': 'Back',
+      'hi': 'पीछे',
+      'ta': 'மீண்டும்',
+      'ur': 'پیچھے',
+    },
     'ixvld9x8': {
       'en': 'Completed Tasks',
       'hi': '',
@@ -2261,23 +2329,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'ft5hp68z': {
-      'en': 'Activity',
+    'c5s8jfl1': {
+      'en': 'Completed Tasks',
       'hi': '',
       'ta': '',
       'ur': '',
     },
-    'xrroh2fw': {
-      'en': 'Current Time',
+    '2teeqmeh': {
+      'en': 'Number of Tasks',
       'hi': '',
       'ta': '',
       'ur': '',
     },
-    'ku70mr3f': {
-      'en': 'Back',
-      'hi': 'पीछे',
-      'ta': 'மீண்டும்',
-      'ur': 'پیچھے',
+    'y3qn15xi': {
+      'en': 'Project',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '5ere0xot': {
+      'en': 'Tasks',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '2huepb9o': {
+      'en': 'No tasks have been added yet!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '6row1e9p': {
+      'en': 'Gallery',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'uokihzc9': {
+      'en': 'Upload Image',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
     'qy3p8652': {
       'en': 'Home',
@@ -2492,7 +2584,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'zpjgyrly': {
+    '5dzerwbg': {
       'en': 'Leave Community',
       'hi': '',
       'ta': '',
@@ -2867,7 +2959,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // viewUser
   {
-    '4n9w3jv2': {
+    'urjogybm': {
       'en': 'Message',
       'hi': '',
       'ta': '',
@@ -2879,11 +2971,176 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'டீம் பயோ',
       'ur': 'ٹیم بائیو',
     },
+    'i75gindb': {
+      'en': 'Short Term Visions',
+      'hi': 'मेरा काम',
+      'ta': 'எனது பணிகள்',
+      'ur': 'میرے کام',
+    },
+    'dkleyres': {
+      'en': 'This user has no short term visions yet!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'zy8ffe4h': {
+      'en': 'Long Term Visions',
+      'hi': 'चालू',
+      'ta': 'செயல்பாட்டில் உள்ளது',
+      'ur': 'کام جاری ہے',
+    },
+    'rwh7zy3j': {
+      'en': 'This user has no long term visions yet!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'rhf8cvqa': {
+      'en': 'Complete',
+      'hi': 'पूरा',
+      'ta': 'முழுமை',
+      'ur': 'مکمل',
+    },
+    'zclj9d48': {
+      'en': 'No visions have been completed yet.\nStand in faith with them!',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
     'phoc7q62': {
       'en': 'Home',
       'hi': 'घर',
       'ta': 'வீடு',
       'ur': 'گھر',
+    },
+  },
+  // desktopOnly
+  {
+    'afyej167': {
+      'en': 'Enter your credentials to access your account.',
+      'hi': 'स्वागत है, और नीचे अपने खाते तक पहुंचें।',
+      'ta': 'வரவேற்கிறோம், கீழே உள்ள உங்கள் கணக்கை அணுகவும்.',
+      'ur': 'خوش آمدید، اور نیچے اپنے اکاؤنٹ تک رسائی حاصل کریں۔',
+    },
+    '2mfpb6bw': {
+      'en': 'Sign In',
+      'hi': 'साइन इन करें',
+      'ta': 'உள்நுழையவும்',
+      'ur': 'سائن ان',
+    },
+    'b6pf4rv6': {
+      'en': '',
+      'hi': 'ईमेल पता',
+      'ta': 'மின்னஞ்சல் முகவரி',
+      'ur': 'ای میل اڈریس',
+    },
+    'juf8dq90': {
+      'en': 'Email Address',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    't4t9jqxu': {
+      'en': '',
+      'hi': 'पासवर्ड',
+      'ta': 'கடவுச்சொல்',
+      'ur': 'پاس ورڈ',
+    },
+    '87i98ggt': {
+      'en': 'Password',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'drf4kia9': {
+      'en': 'Sign In',
+      'hi': 'साइन इन करें',
+      'ta': 'உள்நுழையவும்',
+      'ur': 'سائن ان',
+    },
+    'aifm6oav': {
+      'en': 'Forgot Password?',
+      'hi': 'पासवर्ड भूल गए?',
+      'ta': 'கடவுச்சொல்லை மறந்துவிட்டீர்களா?',
+      'ur': 'پاسورڈ بھول گے؟',
+    },
+    'yn6yzula': {
+      'en': 'Sign Up',
+      'hi': 'साइन अप करें',
+      'ta': 'பதிவு செய்யவும்',
+      'ur': 'سائن اپ',
+    },
+    'l5w30tt2': {
+      'en': '',
+      'hi': 'ईमेल पता',
+      'ta': 'மின்னஞ்சல் முகவரி',
+      'ur': 'ای میل اڈریس',
+    },
+    'd7ant4um': {
+      'en': 'Email Address',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'mwebp0r4': {
+      'en': '',
+      'hi': 'पासवर्ड',
+      'ta': 'கடவுச்சொல்',
+      'ur': 'پاس ورڈ',
+    },
+    'lfd86m92': {
+      'en': 'Password',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'ik3jlnme': {
+      'en': 'Create Account',
+      'hi': 'खाता बनाएं',
+      'ta': 'உங்கள் கணக்கை துவங்குங்கள்',
+      'ur': 'اکاؤنٹ بنائیں',
+    },
+    'u443sb7p': {
+      'en': 'Field is required',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '1lgm77bo': {
+      'en': 'Email address should be minimum 5 characters',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    '1z0vgq8f': {
+      'en': 'email address is too long',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'xrbwtb4t': {
+      'en': 'Email seems to be invalid. Please check',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'b7sdyikm': {
+      'en': 'Field is required',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'rmibb2ea': {
+      'en': 'Field is required',
+      'hi': '',
+      'ta': '',
+      'ur': '',
+    },
+    'e5uxxj8j': {
+      'en': 'Field is required',
+      'hi': '',
+      'ta': '',
+      'ur': '',
     },
   },
   // drawerNav

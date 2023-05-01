@@ -221,6 +221,7 @@ class _ChangePhotoWidgetState extends State<ChangePhotoWidget> {
                                               bytes: m.bytes,
                                               height: m.dimensions?.height,
                                               width: m.dimensions?.width,
+                                              blurHash: m.blurHash,
                                             ))
                                         .toList();
 

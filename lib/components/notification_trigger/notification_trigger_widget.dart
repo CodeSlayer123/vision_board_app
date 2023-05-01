@@ -85,6 +85,10 @@ class _NotificationTriggerWidgetState extends State<NotificationTriggerWidget> {
           animationType: badges.BadgeAnimationType.scale,
           toAnimate: true,
           child: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
             onTap: () async {
               await showModalBottomSheet(
                 isScrollControlled: true,

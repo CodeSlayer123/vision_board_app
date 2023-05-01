@@ -192,6 +192,10 @@ class _FinalizeCommunityWidgetState extends State<FinalizeCommunityWidget>
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 12.0, 0.0),
                                         child: InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
                                           onTap: () async {
                                             scaffoldKey.currentState!
                                                 .openDrawer();
@@ -457,6 +461,11 @@ class _FinalizeCommunityWidgetState extends State<FinalizeCommunityWidget>
                                                     BorderRadius.circular(12.0),
                                               ),
                                               child: InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
                                                 onTap: () async {
                                                   if (MediaQuery.of(context)
                                                           .size
@@ -874,6 +883,10 @@ class _FinalizeCommunityWidgetState extends State<FinalizeCommunityWidget>
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
                                   onTap: () async {
                                     final selectedMedia =
                                         await selectMediaWithSourceBottomSheet(
@@ -903,6 +916,7 @@ class _FinalizeCommunityWidgetState extends State<FinalizeCommunityWidget>
                                                   bytes: m.bytes,
                                                   height: m.dimensions?.height,
                                                   width: m.dimensions?.width,
+                                                  blurHash: m.blurHash,
                                                 ))
                                             .toList();
 

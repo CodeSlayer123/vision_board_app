@@ -120,6 +120,10 @@ class _DrawerNavWidgetState extends State<DrawerNavWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onTap: () async {
                           if (Scaffold.of(context).isDrawerOpen ||
                               Scaffold.of(context).isEndDrawerOpen) {
@@ -158,6 +162,10 @@ class _DrawerNavWidgetState extends State<DrawerNavWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onTap: () async {
                           if (Scaffold.of(context).isDrawerOpen ||
                               Scaffold.of(context).isEndDrawerOpen) {
@@ -196,6 +204,10 @@ class _DrawerNavWidgetState extends State<DrawerNavWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onTap: () async {
                           if (Scaffold.of(context).isDrawerOpen ||
                               Scaffold.of(context).isEndDrawerOpen) {
@@ -239,6 +251,10 @@ class _DrawerNavWidgetState extends State<DrawerNavWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
                       child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onTap: () async {
                           context.pushNamed('joinCommunity');
                         },
@@ -302,6 +318,10 @@ class _DrawerNavWidgetState extends State<DrawerNavWidget> {
                                 20.0, 12.0, 20.0, 0.0),
                             child: AuthUserStreamWidget(
                               builder: (context) => InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
                                 onTap: () async {
                                   context.pushNamed('manageCommunity');
                                 },
@@ -369,6 +389,10 @@ class _DrawerNavWidgetState extends State<DrawerNavWidget> {
                                   20.0, 12.0, 20.0, 0.0),
                               child: AuthUserStreamWidget(
                                 builder: (context) => InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
                                   onTap: () async {
                                     context.pushNamed('createCommunity');
                                   },
@@ -438,6 +462,10 @@ class _DrawerNavWidgetState extends State<DrawerNavWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 32.0),
               child: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
                 onTap: () async {
                   if (Scaffold.of(context).isDrawerOpen ||
                       Scaffold.of(context).isEndDrawerOpen) {

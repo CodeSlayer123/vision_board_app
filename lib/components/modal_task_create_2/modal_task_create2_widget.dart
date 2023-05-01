@@ -44,8 +44,8 @@ class _ModalTaskCreate2WidgetState extends State<ModalTaskCreate2Widget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 300.ms,
-          begin: 0.9,
-          end: 1.0,
+          begin: Offset(0.9, 0.9),
+          end: Offset(1.0, 1.0),
         ),
         FadeEffect(
           curve: Curves.easeInOut,
@@ -156,6 +156,10 @@ class _ModalTaskCreate2WidgetState extends State<ModalTaskCreate2Widget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 1.0, 0.0, 12.0),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pop();
                                     },
@@ -461,6 +465,10 @@ class _ModalTaskCreate2WidgetState extends State<ModalTaskCreate2Widget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 8.0, 0.0),
                                           child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
                                             onTap: () async {
                                               final _datePicked1Date =
                                                   await showDatePicker(
@@ -547,6 +555,10 @@ class _ModalTaskCreate2WidgetState extends State<ModalTaskCreate2Widget>
                                               'containerOnPageLoadAnimation']!),
                                         ),
                                       InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
                                         onTap: () async {
                                           final _datePicked2Date =
                                               await showDatePicker(

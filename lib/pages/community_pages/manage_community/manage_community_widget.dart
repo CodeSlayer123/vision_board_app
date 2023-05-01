@@ -13,6 +13,7 @@ import '/flutter_flow/upload_data.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'manage_community_model.dart';
@@ -153,6 +154,10 @@ class _ManageCommunityWidgetState extends State<ManageCommunityWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 12.0, 0.0),
                                         child: InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
                                           onTap: () async {
                                             scaffoldKey.currentState!
                                                 .openDrawer();
@@ -209,15 +214,62 @@ class _ManageCommunityWidgetState extends State<ManageCommunityWidget> {
                                       FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                               ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 10.0, 0.0, 0.0),
-                                child: Text(
-                                  manageCommunityOrganizationsRecord!
-                                      .inviteCode!,
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
-                                ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Expanded(
+                                    child: Align(
+                                      alignment: AlignmentDirectional(1.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 10.0, 0.0, 0.0),
+                                            child: Text(
+                                              manageCommunityOrganizationsRecord!
+                                                  .inviteCode!,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Align(
+                                      alignment:
+                                          AlignmentDirectional(-0.4, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          FlutterFlowIconButton(
+                                            borderColor: Colors.transparent,
+                                            borderRadius: 30.0,
+                                            borderWidth: 1.0,
+                                            buttonSize: 60.0,
+                                            icon: Icon(
+                                              Icons.content_copy,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              size: 30.0,
+                                            ),
+                                            onPressed: () async {
+                                              await Clipboard.setData(ClipboardData(
+                                                  text:
+                                                      manageCommunityOrganizationsRecord!
+                                                          .inviteCode!));
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -232,24 +284,29 @@ class _ManageCommunityWidgetState extends State<ManageCommunityWidget> {
                             initialIndex: 0,
                             child: Column(
                               children: [
-                                TabBar(
-                                  isScrollable: true,
-                                  labelColor: Colors.black,
-                                  labelStyle:
-                                      FlutterFlowTheme.of(context).bodyMedium,
-                                  indicatorColor: Colors.black,
-                                  tabs: [
-                                    Tab(
-                                      text: FFLocalizations.of(context).getText(
-                                        'amm128rv' /* Community Members */,
+                                Align(
+                                  alignment: Alignment(0.0, 0),
+                                  child: TabBar(
+                                    isScrollable: true,
+                                    labelColor: Colors.black,
+                                    labelStyle:
+                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    indicatorColor: Colors.black,
+                                    tabs: [
+                                      Tab(
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          'amm128rv' /* Community Members */,
+                                        ),
                                       ),
-                                    ),
-                                    Tab(
-                                      text: FFLocalizations.of(context).getText(
-                                        'aww45eq8' /* Edit Community */,
+                                      Tab(
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          'aww45eq8' /* Edit Community */,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                                 Expanded(
                                   child: TabBarView(
@@ -303,6 +360,14 @@ class _ManageCommunityWidgetState extends State<ManageCommunityWidget> {
                                                       .fromSTEB(
                                                           16.0, 4.0, 16.0, 8.0),
                                                   child: InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
                                                     onTap: () async {
                                                       if (MediaQuery.of(context)
                                                               .size
@@ -522,6 +587,14 @@ class _ManageCommunityWidgetState extends State<ManageCommunityWidget> {
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
                                                       onTap: () async {
                                                         final selectedMedia =
                                                             await selectMediaWithSourceBottomSheet(
@@ -563,6 +636,8 @@ class _ManageCommunityWidgetState extends State<ManageCommunityWidget> {
                                                                           width: m
                                                                               .dimensions
                                                                               ?.width,
+                                                                          blurHash:
+                                                                              m.blurHash,
                                                                         ))
                                                                     .toList();
 

@@ -113,6 +113,10 @@ class _AddTeamMembersWidgetState extends State<AddTeamMembersWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 0.0, 0.0),
                               child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
                                 onTap: () async {
                                   final selectedMedia =
                                       await selectMediaWithSourceBottomSheet(
@@ -142,6 +146,7 @@ class _AddTeamMembersWidgetState extends State<AddTeamMembersWidget> {
                                                 bytes: m.bytes,
                                                 height: m.dimensions?.height,
                                                 width: m.dimensions?.width,
+                                                blurHash: m.blurHash,
                                               ))
                                           .toList();
 
@@ -203,6 +208,10 @@ class _AddTeamMembersWidgetState extends State<AddTeamMembersWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         4.0, 4.0, 4.0, 4.0),
                                     child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       onTap: () async {
                                         final selectedMedia =
                                             await selectMediaWithSourceBottomSheet(
@@ -230,6 +239,7 @@ class _AddTeamMembersWidgetState extends State<AddTeamMembersWidget> {
                                                               ?.height,
                                                           width: m.dimensions
                                                               ?.width,
+                                                          blurHash: m.blurHash,
                                                         ))
                                                     .toList();
 

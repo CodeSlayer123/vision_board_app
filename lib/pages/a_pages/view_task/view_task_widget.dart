@@ -148,6 +148,10 @@ class _ViewTaskWidgetState extends State<ViewTaskWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 1.0, 0.0, 12.0),
                                       child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
                                         onTap: () async {
                                           context.pop();
                                         },

@@ -170,6 +170,10 @@ class _TaskDetailsCopyWidgetState extends State<TaskDetailsCopyWidget>
                                   }
                                   final rowProjectsRecord = snapshot.data!;
                                   return InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed(
                                         'projectDetailsPage',

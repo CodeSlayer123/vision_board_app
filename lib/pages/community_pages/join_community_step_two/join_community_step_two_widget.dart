@@ -161,6 +161,10 @@ class _JoinCommunityStepTwoWidgetState extends State<JoinCommunityStepTwoWidget>
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 12.0, 0.0),
                                     child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       onTap: () async {
                                         scaffoldKey.currentState!.openDrawer();
                                       },
@@ -393,6 +397,10 @@ class _JoinCommunityStepTwoWidgetState extends State<JoinCommunityStepTwoWidget>
                                                 BorderRadius.circular(12.0),
                                           ),
                                           child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
                                             onTap: () async {
                                               if (MediaQuery.of(context)
                                                       .size
@@ -893,6 +901,10 @@ class _JoinCommunityStepTwoWidgetState extends State<JoinCommunityStepTwoWidget>
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 20.0, 0.0),
                             child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed('joinCommunity');
                               },
@@ -913,6 +925,10 @@ class _JoinCommunityStepTwoWidgetState extends State<JoinCommunityStepTwoWidget>
                                   shape: BoxShape.rectangle,
                                 ),
                                 child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
                                   onTap: () async {
                                     final organizationsUpdateData = {
                                       'OrgMembers': FieldValue.arrayUnion(

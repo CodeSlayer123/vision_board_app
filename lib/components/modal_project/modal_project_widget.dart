@@ -295,6 +295,10 @@ class _ModalProjectWidgetState extends State<ModalProjectWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 12.0),
                         child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
                           onTap: () async {
                             await showModalBottomSheet(
                               isScrollControlled: true,
@@ -572,33 +576,36 @@ class _ModalProjectWidgetState extends State<ModalProjectWidget>
                       initialIndex: 0,
                       child: Column(
                         children: [
-                          TabBar(
-                            isScrollable: true,
-                            labelColor:
-                                FlutterFlowTheme.of(context).primaryText,
-                            unselectedLabelColor:
-                                FlutterFlowTheme.of(context).secondaryText,
-                            labelStyle:
-                                FlutterFlowTheme.of(context).titleMedium,
-                            indicatorColor:
-                                FlutterFlowTheme.of(context).primary,
-                            tabs: [
-                              Tab(
-                                text: FFLocalizations.of(context).getText(
-                                  't39dexai' /* In Progress */,
+                          Align(
+                            alignment: Alignment(0.0, 0),
+                            child: TabBar(
+                              isScrollable: true,
+                              labelColor:
+                                  FlutterFlowTheme.of(context).primaryText,
+                              unselectedLabelColor:
+                                  FlutterFlowTheme.of(context).secondaryText,
+                              labelStyle:
+                                  FlutterFlowTheme.of(context).titleMedium,
+                              indicatorColor:
+                                  FlutterFlowTheme.of(context).primary,
+                              tabs: [
+                                Tab(
+                                  text: FFLocalizations.of(context).getText(
+                                    't39dexai' /* In Progress */,
+                                  ),
                                 ),
-                              ),
-                              Tab(
-                                text: FFLocalizations.of(context).getText(
-                                  'gd3bhzsf' /* Completed */,
+                                Tab(
+                                  text: FFLocalizations.of(context).getText(
+                                    'gd3bhzsf' /* Completed */,
+                                  ),
                                 ),
-                              ),
-                              Tab(
-                                text: FFLocalizations.of(context).getText(
-                                  'dy7qxdlp' /* Activity */,
+                                Tab(
+                                  text: FFLocalizations.of(context).getText(
+                                    'dy7qxdlp' /* Activity */,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                           Expanded(
                             child: TabBarView(
@@ -667,6 +674,11 @@ class _ModalProjectWidgetState extends State<ModalProjectWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 4.0, 16.0, 8.0),
                                             child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
                                               onTap: () async {
                                                 await showModalBottomSheet(
                                                   isScrollControlled: true,
@@ -1079,6 +1091,11 @@ class _ModalProjectWidgetState extends State<ModalProjectWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 16.0, 12.0),
                                             child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
                                               onTap: () async {
                                                 await showModalBottomSheet(
                                                   isScrollControlled: true,
@@ -1481,6 +1498,11 @@ class _ModalProjectWidgetState extends State<ModalProjectWidget>
                                                   listViewActivityRecordList[
                                                       listViewIndex];
                                               return InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
                                                 onTap: () async {
                                                   final activityUpdateData =
                                                       createActivityRecordData(

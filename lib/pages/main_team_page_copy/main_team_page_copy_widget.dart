@@ -138,6 +138,10 @@ class _MainTeamPageCopyWidgetState extends State<MainTeamPageCopyWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 12.0, 0.0),
                                     child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       onTap: () async {
                                         scaffoldKey.currentState!.openDrawer();
                                       },
@@ -261,23 +265,26 @@ class _MainTeamPageCopyWidgetState extends State<MainTeamPageCopyWidget> {
                         initialIndex: 0,
                         child: Column(
                           children: [
-                            TabBar(
-                              labelColor: Colors.black,
-                              labelStyle:
-                                  FlutterFlowTheme.of(context).bodyMedium,
-                              indicatorColor: Colors.black,
-                              tabs: [
-                                Tab(
-                                  text: FFLocalizations.of(context).getText(
-                                    'u91x7ftu' /* Community Members */,
+                            Align(
+                              alignment: Alignment(0.0, 0),
+                              child: TabBar(
+                                labelColor: Colors.black,
+                                labelStyle:
+                                    FlutterFlowTheme.of(context).bodyMedium,
+                                indicatorColor: Colors.black,
+                                tabs: [
+                                  Tab(
+                                    text: FFLocalizations.of(context).getText(
+                                      'u91x7ftu' /* Community Members */,
+                                    ),
                                   ),
-                                ),
-                                Tab(
-                                  text: FFLocalizations.of(context).getText(
-                                    'c5fouh8u' /* Example 3 */,
+                                  Tab(
+                                    text: FFLocalizations.of(context).getText(
+                                      'c5fouh8u' /* Example 3 */,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                             Expanded(
                               child: TabBarView(
@@ -328,6 +335,11 @@ class _MainTeamPageCopyWidgetState extends State<MainTeamPageCopyWidget> {
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 8.0),
                                               child: InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
                                                 onTap: () async {
                                                   if (MediaQuery.of(context)
                                                           .size

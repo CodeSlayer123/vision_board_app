@@ -67,6 +67,10 @@ class _VisionCardsWidgetState extends State<VisionCardsWidget> {
             final staggeredViewProjectsRecord =
                 staggeredViewProjectsRecordList[staggeredViewIndex];
             return InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed(
                   'projectDetailsPage2a',

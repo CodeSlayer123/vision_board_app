@@ -91,6 +91,10 @@ class _Test2WidgetState extends State<Test2Widget> {
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
                   onTap: () async {
                     context.pushNamed('projectDetailsPage');
                   },
@@ -399,6 +403,10 @@ class _Test2WidgetState extends State<Test2Widget> {
                         return Align(
                           alignment: AlignmentDirectional(0.0, 0.0),
                           child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
                                 'projectDetailsPage',

@@ -440,6 +440,10 @@ class _ModalAddMembersWidgetState extends State<ModalAddMembersWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 8.0),
                                       child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
                                         onTap: () async {
                                           context.pushNamed(
                                             'teamMemberDetails',

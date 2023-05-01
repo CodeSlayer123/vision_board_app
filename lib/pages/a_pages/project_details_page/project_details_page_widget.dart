@@ -549,35 +549,41 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                     initialIndex: 2,
                     child: Column(
                       children: [
-                        TabBar(
-                          isScrollable: true,
-                          labelColor: FlutterFlowTheme.of(context).primaryText,
-                          unselectedLabelColor:
-                              FlutterFlowTheme.of(context).secondaryText,
-                          labelStyle: FlutterFlowTheme.of(context).titleMedium,
-                          indicatorColor: FlutterFlowTheme.of(context).primary,
-                          tabs: [
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                '8i8307mb' /* In Progress */,
+                        Align(
+                          alignment: Alignment(0.0, 0),
+                          child: TabBar(
+                            isScrollable: true,
+                            labelColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            unselectedLabelColor:
+                                FlutterFlowTheme.of(context).secondaryText,
+                            labelStyle:
+                                FlutterFlowTheme.of(context).titleMedium,
+                            indicatorColor:
+                                FlutterFlowTheme.of(context).primary,
+                            tabs: [
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '8i8307mb' /* In Progress */,
+                                ),
                               ),
-                            ),
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                '1870f5uq' /* Completed */,
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '1870f5uq' /* Completed */,
+                                ),
                               ),
-                            ),
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                '4cmr54lc' /* Activity */,
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '4cmr54lc' /* Activity */,
+                                ),
                               ),
-                            ),
-                            Tab(
-                              text: FFLocalizations.of(context).getText(
-                                'zj029l6a' /* Description */,
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  'zj029l6a' /* Description */,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Expanded(
                           child: TabBarView(
@@ -644,6 +650,10 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 4.0, 16.0, 8.0),
                                           child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context.pushNamed(
                                                 'taskDetails',
@@ -1124,6 +1134,10 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 12.0),
                                           child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context.pushNamed(
                                                 'taskDetails',
@@ -1508,6 +1522,11 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                                                 listViewActivityRecordList[
                                                     listViewIndex];
                                             return InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
                                               onTap: () async {
                                                 final activityUpdateData =
                                                     createActivityRecordData(

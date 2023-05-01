@@ -197,6 +197,10 @@ class _MainProjectsWidgetState extends State<MainProjectsWidget>
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed(
                                         'projectDetailsPage',
@@ -480,6 +484,10 @@ class _MainProjectsWidgetState extends State<MainProjectsWidget>
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed(
                                         'projectDetailsPage',

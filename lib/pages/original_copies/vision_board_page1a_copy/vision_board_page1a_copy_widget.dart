@@ -190,6 +190,10 @@ class _VisionBoardPage1aCopyWidgetState
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 12.0, 0.0),
                                   child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
                                     onTap: () async {
                                       scaffoldKey.currentState!.openDrawer();
                                     },
@@ -433,6 +437,10 @@ class _VisionBoardPage1aCopyWidgetState
                                               BorderRadius.circular(12.0),
                                         ),
                                         child: InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
                                           onTap: () async {
                                             if (MediaQuery.of(context)
                                                     .size
@@ -794,6 +802,10 @@ class _VisionBoardPage1aCopyWidgetState
                       return Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
                               'projectDetailsPage',

@@ -279,6 +279,7 @@ class _CreateProjectCopy2WidgetState extends State<CreateProjectCopy2Widget> {
                                                     height:
                                                         m.dimensions?.height,
                                                     width: m.dimensions?.width,
+                                                    blurHash: m.blurHash,
                                                   ))
                                               .toList();
 
